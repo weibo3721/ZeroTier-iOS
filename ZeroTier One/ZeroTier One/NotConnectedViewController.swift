@@ -40,7 +40,7 @@ class NotConnectedViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        PiwikTracker.sharedInstance().sendView("Network Info: Not Connected");
+        //PiwikTracker.sharedInstance().sendView("Network Info: Not Connected");
 
         let curNetworkId = manager.getNetworkID().uint64Value
 

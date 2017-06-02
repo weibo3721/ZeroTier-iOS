@@ -69,7 +69,7 @@ class NetworkListViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        PiwikTracker.sharedInstance().sendView("Network List");
+        //PiwikTracker.sharedInstance().sendView("Network List");
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

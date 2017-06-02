@@ -39,13 +39,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             defaults.set(uuid, forKey: settingsKey)
         }
 
-        PiwikTracker.sharedInstance(withSiteID: "4", baseURL: URL.init(string: "https://piwik.zerotier.com/piwik.php"))
-        PiwikTracker.sharedInstance().userID = uuid
-        PiwikTracker.sharedInstance().appName = "ZeroTier One iOS"
-        PiwikTracker.sharedInstance().appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        PiwikTracker.sharedInstance().dispatchInterval = 0
+        //PiwikTracker.sharedInstance(withSiteID: "4", baseURL: URL.init(string: "https://piwik.zerotier.com/piwik.php"))
+        //PiwikTracker.sharedInstance().userID = uuid
+        //PiwikTracker.sharedInstance().appName = "ZeroTier One iOS"
+        //PiwikTracker.sharedInstance().appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        //PiwikTracker.sharedInstance().dispatchInterval = 0
         #if DEBUG
-        PiwikTracker.sharedInstance().debug = true
+        //PiwikTracker.sharedInstance().debug = true
         #endif
         
         loadVpnManagers()

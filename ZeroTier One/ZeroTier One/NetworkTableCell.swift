@@ -88,7 +88,7 @@ class NetworkTableCell: UITableViewCell {
                         return
                     }
 
-                    PiwikTracker.sharedInstance().sendEvent(withCategory: "network", action: "join", name: networkIdStr, value: NSNumber(value: 0))
+                    //PiwikTracker.sharedInstance().sendEvent(withCategory: "network", action: "join", name: networkIdStr, value: NSNumber(value: 0))
 
                     do {
                         try self.vpnManager.startVpn()
@@ -100,7 +100,7 @@ class NetworkTableCell: UITableViewCell {
             }
         }
         else {
-            PiwikTracker.sharedInstance().sendEvent(withCategory: "network", action: "leave", name: networkIdStr, value: NSNumber(value:0))
+            //PiwikTracker.sharedInstance().sendEvent(withCategory: "network", action: "leave", name: networkIdStr, value: NSNumber(value:0))
             vpnManager.stopVpn()
         }
     }

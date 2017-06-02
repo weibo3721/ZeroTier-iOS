@@ -45,7 +45,7 @@ class AddNetworkViewController: UIViewController, UITextFieldDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        PiwikTracker.sharedInstance().sendView("Add Network");
+        //PiwikTracker.sharedInstance().sendView("Add Network");
     }
 
     override func didReceiveMemoryWarning() {

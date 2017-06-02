@@ -69,7 +69,7 @@ class NetworkInfoViewController: UIViewController, ConnectedNetworkMonitorDelega
             loadViewInformation()
         }
 
-        PiwikTracker.sharedInstance().sendView("Network Info");
+        //PiwikTracker.sharedInstance().sendView("Network Info");
     }
 
     override func viewDidDisappear(_ animated: Bool) {
