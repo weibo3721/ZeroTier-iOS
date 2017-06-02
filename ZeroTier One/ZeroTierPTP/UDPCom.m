@@ -57,21 +57,21 @@ extern const DDLogLevel ddLogLevel;
         [_socket enableReusePort:YES error:&error];
 
         if (error) {
-            DDLogError(@"Error setting reuse port: %@", error);
+            //DDLogError(@"Error setting reuse port: %@", error);
             error = nil;
         }
 
         [_socket bindToPort:9993 error:&error];
 
         if (error) {
-            DDLogError(@"Error binding to port 9993: %@", error);
+            //DDLogError(@"Error binding to port 9993: %@", error);
             error = nil;
         }
 
         [_socket beginReceiving:&error];
 
         if (error) {
-            DDLogError(@"Error listening to port 9993: %@", error);
+            //DDLogError(@"Error listening to port 9993: %@", error);
             error = nil;
         }
 
@@ -107,7 +107,7 @@ extern const DDLogLevel ddLogLevel;
 
     if (destination.ss_family == AF_INET) {
         if (_socket4FD < 0) {
-            DDLogError(@"Invalid IPv4 Socket");
+            //DDLogError(@"Invalid IPv4 Socket");
             [self setupSocket];
             return -2;
         }
@@ -118,7 +118,7 @@ extern const DDLogLevel ddLogLevel;
         sent = (int32_t)sendto(_socket4FD, data.bytes, data.length, 0, (struct sockaddr*)&destination, sizeof(struct sockaddr_in));
 
         if (sent < 0) {
-            DDLogError(@"Sending to %@ failed.  Try sending via NAT64", dest);
+            //DDLogError(@"Sending to %@ failed.  Try sending via NAT64", dest);
             // sending over IPv4 failed.  Try sending via NAT64
             destination = [NetworkUtil v6addressFromv4Address:remoteAddress];
         }
@@ -129,7 +129,7 @@ extern const DDLogLevel ddLogLevel;
 
     if (destination.ss_family == AF_INET6) {
         if (_socket6FD < 0) {
-            DDLogError(@"Invalid IPv6 socket");
+            //DDLogError(@"Invalid IPv6 socket");
             [self setupSocket];
             return -2;
         }
@@ -140,7 +140,7 @@ extern const DDLogLevel ddLogLevel;
         sent = (int32_t)sendto(_socket6FD, data.bytes, data.length, 0, (struct sockaddr*)&destination, sizeof(struct sockaddr_in6));
 
         if (sent < 0) {
-            DDLogError(@"Sending to %@ failed.", dest);
+            //DDLogError(@"Sending to %@ failed.", dest);
             return -1;
         }
         else {
@@ -164,7 +164,7 @@ extern const DDLogLevel ddLogLevel;
 - (void)udpSocket:(GCDAsyncUdpSocket *)sock didNotSendDataWithTag:(long)tag dueToError:(NSError *)error {
     (void)sock;
     if (error != nil) {
-        DDLogError(@"%@", error);
+        //DDLogError(@"%@", error);
     }
     DDLogDebug(@"didNotSendDataWithTag: %ld", tag);
 }
@@ -177,7 +177,7 @@ extern const DDLogLevel ddLogLevel;
 - (void)udpSocketDidClose:(GCDAsyncUdpSocket *)sock withError:(NSError *)error {
     (void)sock;
     if (error != nil) {
-        DDLogError(@"%@", error);
+        //DDLogError(@"%@", error);
     }
 
     DDLogDebug(@"socket closed");

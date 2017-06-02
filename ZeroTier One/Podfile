@@ -6,6 +6,8 @@ use_frameworks!
 target 'ZeroTier One' do
 pod 'GoogleAnalytics'
 pod 'CocoaLumberjack/Swift'
+pod 'CocoaLumberjack'
+pod 'CocoaAsyncSocket'
 end
 
 target 'libZeroTier' do

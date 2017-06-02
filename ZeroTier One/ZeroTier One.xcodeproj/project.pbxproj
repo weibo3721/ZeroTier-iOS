@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CCB5251184DA46BCF187E70 /* Pods_ZeroTier_One.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5181B416837488A135ACA87B /* Pods_ZeroTier_One.framework */; };
+		70EA0F2D07E3A11CF7265A5C /* Pods_libZeroTier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCF388B0BB5CA50C58B21EE /* Pods_libZeroTier.framework */; };
+		7C6A399AE3ED98BB1672BE29 /* Pods_ZeroTierTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0730C04C2174D555E9D029F8 /* Pods_ZeroTierTests.framework */; };
 		930A66311CD535F9000A13DA /* ZTVPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930A66301CD535F9000A13DA /* ZTVPNManager.swift */; };
 		930A66331CD537AD000A13DA /* ZTVPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930A66321CD537AD000A13DA /* ZTVPN.swift */; };
 		9311310F1D93433B005C55B8 /* Membership.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 931131081D9342DD005C55B8 /* Membership.cpp */; };
@@ -116,10 +119,10 @@
 		93FEFE101B92925400A15E54 /* Topology.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93FEFDF91B92925400A15E54 /* Topology.cpp */; };
 		93FEFE111B92925400A15E54 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93FEFDFB1B92925400A15E54 /* Utils.cpp */; };
 		93FEFE151B92927E00A15E54 /* OSUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93FEFE121B92927E00A15E54 /* OSUtils.cpp */; };
-		D672A4101EE12DCF0049B491 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D672A40B1EE12DA90049B491 /* CocoaAsyncSocket.framework */; };
-		D672A4111EE12DCF0049B491 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D672A40B1EE12DA90049B491 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D672A4181EE12DE40049B491 /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D672A3EF1EE12DA40049B491 /* CocoaLumberjackSwift.framework */; };
-		D672A4191EE12DE40049B491 /* CocoaLumberjackSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D672A3EF1EE12DA40049B491 /* CocoaLumberjackSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D637D3BB1EE1407C00D5C142 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D637D39E1EE13FE400D5C142 /* CocoaLumberjack.framework */; };
+		D637D3BC1EE1407C00D5C142 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D637D39E1EE13FE400D5C142 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DCBFEFA2526E0FEE91FF8FF2 /* Pods_ZeroTier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F448AFC46276C0000D6636E /* Pods_ZeroTier.framework */; };
+		E83A3A92A8926981D6DD3BE8 /* Pods_ZeroTierPTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33B2B45C8C29832AE994C4B /* Pods_ZeroTierPTP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,152 +168,124 @@
 			remoteGlobalIDString = 934193451BA3CB3100473AED;
 			remoteInfo = ZeroTierPTP;
 		};
-		D672A3E41EE12DA40049B491 /* PBXContainerItemProxy */ = {
+		D637D39B1EE13FE400D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 18F3BFD71A81E06E00692297;
 			remoteInfo = "CocoaLumberjack-iOS-Static";
 		};
-		D672A3E61EE12DA40049B491 /* PBXContainerItemProxy */ = {
+		D637D39D1EE13FE400D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 19FF46021B8B4CF400B43179;
 			remoteInfo = "CocoaLumberjack-iOS";
 		};
-		D672A3E81EE12DA40049B491 /* PBXContainerItemProxy */ = {
+		D637D39F1EE13FE400D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = DCB3185114EB418E001CFBEE;
 			remoteInfo = "CocoaLumberjack-macOS";
 		};
-		D672A3EA1EE12DA40049B491 /* PBXContainerItemProxy */ = {
+		D637D3A11EE13FE400D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 19D90B261BBFA9DB00947169;
 			remoteInfo = "CocoaLumberjack-tvOS";
 		};
-		D672A3EC1EE12DA40049B491 /* PBXContainerItemProxy */ = {
+		D637D3A31EE13FE400D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 19190EDE1B84D812008D059E;
 			remoteInfo = "CocoaLumberjack-watchOS";
 		};
-		D672A3EE1EE12DA40049B491 /* PBXContainerItemProxy */ = {
+		D637D3A51EE13FE400D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 19FF460F1B8B4D1400B43179;
 			remoteInfo = "CocoaLumberjackSwift-iOS";
 		};
-		D672A3F01EE12DA40049B491 /* PBXContainerItemProxy */ = {
+		D637D3A71EE13FE400D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 18F3BF0F1A81D8B700692297;
 			remoteInfo = "CocoaLumberjackSwift-macOS";
 		};
-		D672A3F21EE12DA40049B491 /* PBXContainerItemProxy */ = {
+		D637D3A91EE13FE400D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 19D90B351BBFAA7500947169;
 			remoteInfo = "CocoaLumberjackSwift-tvOS";
 		};
-		D672A3F41EE12DA40049B491 /* PBXContainerItemProxy */ = {
+		D637D3AB1EE13FE400D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 19190EEB1B84D826008D059E;
 			remoteInfo = "CocoaLumberjackSwift-watchOS";
 		};
-		D672A3F61EE12DA40049B491 /* PBXContainerItemProxy */ = {
+		D637D3AD1EE13FE400D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 18F3BFF21A81E0C700692297;
 			remoteInfo = iOSLibStaticTest;
 		};
-		D672A3F81EE12DA40049B491 /* PBXContainerItemProxy */ = {
+		D637D3AF1EE13FE400D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = DCB318CA14ED6C3B001CFBEE;
 			remoteInfo = FmwkTest;
 		};
-		D672A3FA1EE12DA40049B491 /* PBXContainerItemProxy */ = {
+		D637D3B11EE13FE400D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 18F3BF5F1A81DD2E00692297;
 			remoteInfo = iOSSwiftTest;
 		};
-		D672A3FC1EE12DA40049B491 /* PBXContainerItemProxy */ = {
+		D637D3B31EE13FE400D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 55CCBEFF19BA679200957A39;
 			remoteInfo = SwiftTest;
 		};
-		D672A3FE1EE12DA40049B491 /* PBXContainerItemProxy */ = {
+		D637D3B51EE13FE400D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 19406BE11BDBABFF001194DC;
 			remoteInfo = tvOSSwiftTest;
 		};
-		D672A4001EE12DA40049B491 /* PBXContainerItemProxy */ = {
+		D637D3B71EE13FE400D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 19EC14671B84D134000EC2E7;
 			remoteInfo = watchOSSwiftTest;
 		};
-		D672A4021EE12DA40049B491 /* PBXContainerItemProxy */ = {
+		D637D3B91EE13FE400D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 19EC14731B84D134000EC2E7;
 			remoteInfo = "watchOSSwiftTest Extension";
 		};
-		D672A40A1EE12DA90049B491 /* PBXContainerItemProxy */ = {
+		D637D3BD1EE1407C00D5C142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D672A4041EE12DA90049B491 /* CocoaAsyncSocket.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6CD990101B77868C0011A685;
-			remoteInfo = "iOS CocoaAsyncSocket";
-		};
-		D672A40C1EE12DA90049B491 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D672A4041EE12DA90049B491 /* CocoaAsyncSocket.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9FC41F131B9D965000578BEB;
-			remoteInfo = "Mac CocoaAsyncSocket";
-		};
-		D672A40E1EE12DA90049B491 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D672A4041EE12DA90049B491 /* CocoaAsyncSocket.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7D8B70C41BCFA15700D8E273;
-			remoteInfo = "tvOS CocoaAsyncSocket";
-		};
-		D672A4121EE12DCF0049B491 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D672A4041EE12DA90049B491 /* CocoaAsyncSocket.xcodeproj */;
+			containerPortal = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 6CD9900F1B77868C0011A685;
-			remoteInfo = "iOS CocoaAsyncSocket";
-		};
-		D672A41A1EE12DE40049B491 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 19FF460E1B8B4D1400B43179;
-			remoteInfo = "CocoaLumberjackSwift-iOS";
+			remoteGlobalIDString = 19FF46011B8B4CF400B43179;
+			remoteInfo = "CocoaLumberjack-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -332,8 +307,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D672A4191EE12DE40049B491 /* CocoaLumberjackSwift.framework in Embed Frameworks */,
-				D672A4111EE12DCF0049B491 /* CocoaAsyncSocket.framework in Embed Frameworks */,
+				D637D3BC1EE1407C00D5C142 /* CocoaLumberjack.framework in Embed Frameworks */,
 				934193751BA3CC4600473AED /* ZeroTier.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -351,6 +325,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0730C04C2174D555E9D029F8 /* Pods_ZeroTierTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroTierTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BCF388B0BB5CA50C58B21EE /* Pods_libZeroTier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libZeroTier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D94C48B0C3C3AC694C37681 /* Pods-libZeroTier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libZeroTier.release.xcconfig"; path = "Pods/Target Support Files/Pods-libZeroTier/Pods-libZeroTier.release.xcconfig"; sourceTree = "<group>"; };
+		2AB3DD9899E178D7ADF3678B /* Pods-ZeroTierTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroTierTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZeroTierTests/Pods-ZeroTierTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E9FE091DA3A993BBFEA131F /* Pods-ZeroTier One.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroTier One.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZeroTier One/Pods-ZeroTier One.debug.xcconfig"; sourceTree = "<group>"; };
+		5181B416837488A135ACA87B /* Pods_ZeroTier_One.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroTier_One.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		744A32429005351E3965EAC2 /* Pods-ZeroTier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroTier.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZeroTier/Pods-ZeroTier.release.xcconfig"; sourceTree = "<group>"; };
+		7F448AFC46276C0000D6636E /* Pods_ZeroTier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroTier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		930A66301CD535F9000A13DA /* ZTVPNManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZTVPNManager.swift; sourceTree = "<group>"; };
 		930A66321CD537AD000A13DA /* ZTVPN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZTVPN.swift; sourceTree = "<group>"; };
 		931131081D9342DD005C55B8 /* Membership.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Membership.cpp; path = ../ZeroTierOne/node/Membership.cpp; sourceTree = SOURCE_ROOT; };
@@ -382,6 +364,7 @@
 		93317B7F1DA6B66E00190050 /* NDPTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDPTable.h; sourceTree = "<group>"; };
 		93317B801DA6B66E00190050 /* NDPTable.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NDPTable.mm; sourceTree = "<group>"; };
 		933512F01C2609A200186F46 /* NetworkTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTableCell.swift; sourceTree = "<group>"; };
+		93391B9BA39654A0F92579EB /* Pods-ZeroTierTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroTierTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZeroTierTests/Pods-ZeroTierTests.release.xcconfig"; sourceTree = "<group>"; };
 		933D90651EBD23D2006518E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		933D90661EBD23D2006518E6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		933D90691EBD2484006518E6 /* PiwikTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PiwikTracker.h; path = "../../piwik-sdk-ios/PiwikTracker/PiwikTracker.h"; sourceTree = "<group>"; };
@@ -534,8 +517,13 @@
 		93FEFDFC1B92925400A15E54 /* Utils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Utils.hpp; path = ../ZeroTierOne/node/Utils.hpp; sourceTree = SOURCE_ROOT; };
 		93FEFE121B92927E00A15E54 /* OSUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OSUtils.cpp; path = ../ZeroTierOne/osdep/OSUtils.cpp; sourceTree = SOURCE_ROOT; };
 		93FEFE131B92927E00A15E54 /* OSUtils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = OSUtils.hpp; path = ../ZeroTierOne/osdep/OSUtils.hpp; sourceTree = SOURCE_ROOT; };
-		D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lumberjack.xcodeproj; path = "../CocoaLumberjack-master/Lumberjack.xcodeproj"; sourceTree = "<group>"; };
-		D672A4041EE12DA90049B491 /* CocoaAsyncSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocoaAsyncSocket.xcodeproj; path = "../CocoaAsyncSocket-master/CocoaAsyncSocket.xcodeproj"; sourceTree = "<group>"; };
+		950A8D7864184866095FF189 /* Pods-ZeroTier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroTier.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZeroTier/Pods-ZeroTier.debug.xcconfig"; sourceTree = "<group>"; };
+		99002C7350F1318CBAFA101B /* Pods-ZeroTierPTP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroTierPTP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZeroTierPTP/Pods-ZeroTierPTP.debug.xcconfig"; sourceTree = "<group>"; };
+		994090735EAB42AF1F36310C /* Pods-libZeroTier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libZeroTier.debug.xcconfig"; path = "Pods/Target Support Files/Pods-libZeroTier/Pods-libZeroTier.debug.xcconfig"; sourceTree = "<group>"; };
+		C33B2B45C8C29832AE994C4B /* Pods_ZeroTierPTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroTierPTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52D5350C0CDBAB127CE5CFE /* Pods-ZeroTier One.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroTier One.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZeroTier One/Pods-ZeroTier One.release.xcconfig"; sourceTree = "<group>"; };
+		D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lumberjack.xcodeproj; path = "../CocoaLumberjack-master/Lumberjack.xcodeproj"; sourceTree = "<group>"; };
+		EA0309E610332985CD6FBBE5 /* Pods-ZeroTierPTP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroTierPTP.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZeroTierPTP/Pods-ZeroTierPTP.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -546,6 +534,7 @@
 				931BC17E1BF83A1500DAFCC4 /* libc++.tbd in Frameworks */,
 				931BC17B1BF831C600DAFCC4 /* liblibZeroTier.a in Frameworks */,
 				93FBA9571BEDAB84008CB4D8 /* ZeroTier.framework in Frameworks */,
+				E83A3A92A8926981D6DD3BE8 /* Pods_ZeroTierPTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +545,7 @@
 				933F4C261D99C90E00A33631 /* libresolv.tbd in Frameworks */,
 				9399DCE41BA3CD670021BC4A /* liblibZeroTier.a in Frameworks */,
 				9399DCE51BA3CD7F0021BC4A /* libc++.tbd in Frameworks */,
+				DCBFEFA2526E0FEE91FF8FF2 /* Pods_ZeroTier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +554,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				934193691BA3CC4600473AED /* ZeroTier.framework in Frameworks */,
+				7C6A399AE3ED98BB1672BE29 /* Pods_ZeroTierTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,14 +563,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				933D90671EBD23D2006518E6 /* CoreGraphics.framework in Frameworks */,
+				D637D3BB1EE1407C00D5C142 /* CocoaLumberjack.framework in Frameworks */,
 				933D90681EBD23D2006518E6 /* CoreLocation.framework in Frameworks */,
-				D672A4101EE12DCF0049B491 /* CocoaAsyncSocket.framework in Frameworks */,
-				D672A4181EE12DE40049B491 /* CocoaLumberjackSwift.framework in Frameworks */,
 				935F6F741CB358B600709388 /* CoreData.framework in Frameworks */,
 				935F6F721CB358AF00709388 /* SystemConfiguration.framework in Frameworks */,
 				935F6F701CB3589E00709388 /* libz.tbd in Frameworks */,
 				935F6F6E1CB3587D00709388 /* libsqlite3.tbd in Frameworks */,
 				934193741BA3CC4600473AED /* ZeroTier.framework in Frameworks */,
+				3CCB5251184DA46BCF187E70 /* Pods_ZeroTier_One.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +578,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70EA0F2D07E3A11CF7265A5C /* Pods_libZeroTier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,8 +596,30 @@
 				935F6F711CB358AF00709388 /* SystemConfiguration.framework */,
 				935F6F6F1CB3589E00709388 /* libz.tbd */,
 				935F6F6D1CB3587D00709388 /* libsqlite3.tbd */,
+				7F448AFC46276C0000D6636E /* Pods_ZeroTier.framework */,
+				5181B416837488A135ACA87B /* Pods_ZeroTier_One.framework */,
+				C33B2B45C8C29832AE994C4B /* Pods_ZeroTierPTP.framework */,
+				0730C04C2174D555E9D029F8 /* Pods_ZeroTierTests.framework */,
+				0BCF388B0BB5CA50C58B21EE /* Pods_libZeroTier.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44888AA50BC21EA0015EBBF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				950A8D7864184866095FF189 /* Pods-ZeroTier.debug.xcconfig */,
+				744A32429005351E3965EAC2 /* Pods-ZeroTier.release.xcconfig */,
+				3E9FE091DA3A993BBFEA131F /* Pods-ZeroTier One.debug.xcconfig */,
+				C52D5350C0CDBAB127CE5CFE /* Pods-ZeroTier One.release.xcconfig */,
+				99002C7350F1318CBAFA101B /* Pods-ZeroTierPTP.debug.xcconfig */,
+				EA0309E610332985CD6FBBE5 /* Pods-ZeroTierPTP.release.xcconfig */,
+				2AB3DD9899E178D7ADF3678B /* Pods-ZeroTierTests.debug.xcconfig */,
+				93391B9BA39654A0F92579EB /* Pods-ZeroTierTests.release.xcconfig */,
+				994090735EAB42AF1F36310C /* Pods-libZeroTier.debug.xcconfig */,
+				1D94C48B0C3C3AC694C37681 /* Pods-libZeroTier.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		934193471BA3CB3100473AED /* ZeroTierPTP */ = {
@@ -719,8 +733,7 @@
 		93FEFD071B9026C100A15E54 = {
 			isa = PBXGroup;
 			children = (
-				D672A4041EE12DA90049B491 /* CocoaAsyncSocket.xcodeproj */,
-				D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */,
+				D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */,
 				93FEFD121B9026C200A15E54 /* ZeroTier One */,
 				934193471BA3CB3100473AED /* ZeroTierPTP */,
 				934193601BA3CC4600473AED /* ZeroTierCocoa */,
@@ -730,6 +743,7 @@
 				9341936E1BA3CC4600473AED /* ZeroTierTests */,
 				93FEFD111B9026C200A15E54 /* Products */,
 				0F3E6EA6D749047904ADAA9C /* Frameworks */,
+				44888AA50BC21EA0015EBBF2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -873,35 +887,25 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		D672A3D21EE12DA40049B491 /* Products */ = {
+		D637D3891EE13FE400D5C142 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D672A3E51EE12DA40049B491 /* libCocoaLumberjack.a */,
-				D672A3E71EE12DA40049B491 /* CocoaLumberjack.framework */,
-				D672A3E91EE12DA40049B491 /* CocoaLumberjack.framework */,
-				D672A3EB1EE12DA40049B491 /* CocoaLumberjack.framework */,
-				D672A3ED1EE12DA40049B491 /* CocoaLumberjack.framework */,
-				D672A3EF1EE12DA40049B491 /* CocoaLumberjackSwift.framework */,
-				D672A3F11EE12DA40049B491 /* CocoaLumberjackSwift.framework */,
-				D672A3F31EE12DA40049B491 /* CocoaLumberjackSwift.framework */,
-				D672A3F51EE12DA40049B491 /* CocoaLumberjackSwift.framework */,
-				D672A3F71EE12DA40049B491 /* iOSLibStaticTest.app */,
-				D672A3F91EE12DA40049B491 /* FmwkTest.app */,
-				D672A3FB1EE12DA40049B491 /* iOSSwiftTest.app */,
-				D672A3FD1EE12DA40049B491 /* SwiftTest.app */,
-				D672A3FF1EE12DA40049B491 /* tvOSSwiftTest.app */,
-				D672A4011EE12DA40049B491 /* watchOSSwiftTest.app */,
-				D672A4031EE12DA40049B491 /* watchOSSwiftTest Extension.appex */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D672A4051EE12DA90049B491 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D672A40B1EE12DA90049B491 /* CocoaAsyncSocket.framework */,
-				D672A40D1EE12DA90049B491 /* CocoaAsyncSocket.framework */,
-				D672A40F1EE12DA90049B491 /* CocoaAsyncSocket.framework */,
+				D637D39C1EE13FE400D5C142 /* libCocoaLumberjack.a */,
+				D637D39E1EE13FE400D5C142 /* CocoaLumberjack.framework */,
+				D637D3A01EE13FE400D5C142 /* CocoaLumberjack.framework */,
+				D637D3A21EE13FE400D5C142 /* CocoaLumberjack.framework */,
+				D637D3A41EE13FE400D5C142 /* CocoaLumberjack.framework */,
+				D637D3A61EE13FE400D5C142 /* CocoaLumberjackSwift.framework */,
+				D637D3A81EE13FE400D5C142 /* CocoaLumberjackSwift.framework */,
+				D637D3AA1EE13FE400D5C142 /* CocoaLumberjackSwift.framework */,
+				D637D3AC1EE13FE400D5C142 /* CocoaLumberjackSwift.framework */,
+				D637D3AE1EE13FE400D5C142 /* iOSLibStaticTest.app */,
+				D637D3B01EE13FE400D5C142 /* FmwkTest.app */,
+				D637D3B21EE13FE400D5C142 /* iOSSwiftTest.app */,
+				D637D3B41EE13FE400D5C142 /* SwiftTest.app */,
+				D637D3B61EE13FE400D5C142 /* tvOSSwiftTest.app */,
+				D637D3B81EE13FE400D5C142 /* watchOSSwiftTest.app */,
+				D637D3BA1EE13FE400D5C142 /* watchOSSwiftTest Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -942,9 +946,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 934193501BA3CB3100473AED /* Build configuration list for PBXNativeTarget "ZeroTierPTP" */;
 			buildPhases = (
+				6683C6346CCE9BDEF00045F3 /* [CP] Check Pods Manifest.lock */,
 				934193421BA3CB3100473AED /* Sources */,
 				934193431BA3CB3100473AED /* Frameworks */,
 				934193441BA3CB3100473AED /* Resources */,
+				EC847A6EA3070731DAAC5F95 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -960,10 +966,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 934193761BA3CC4600473AED /* Build configuration list for PBXNativeTarget "ZeroTier" */;
 			buildPhases = (
+				561445569A8F18B7A6E9E9C0 /* [CP] Check Pods Manifest.lock */,
 				9341935A1BA3CC4600473AED /* Sources */,
 				9341935B1BA3CC4600473AED /* Frameworks */,
 				9341935C1BA3CC4600473AED /* Headers */,
 				9341935D1BA3CC4600473AED /* Resources */,
+				8B9D42A74551CAC11AAE3272 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -979,9 +987,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9341937A1BA3CC4600473AED /* Build configuration list for PBXNativeTarget "ZeroTierTests" */;
 			buildPhases = (
+				7EBFF7987619F486F6C7820E /* [CP] Check Pods Manifest.lock */,
 				934193641BA3CC4600473AED /* Sources */,
 				934193651BA3CC4600473AED /* Frameworks */,
 				934193661BA3CC4600473AED /* Resources */,
+				9D1F2ECFF1143475F18F2E6A /* [CP] Embed Pods Frameworks */,
+				B80EE7E122CCFE076B488879 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -998,19 +1009,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93FEFD381B9026C300A15E54 /* Build configuration list for PBXNativeTarget "ZeroTier One" */;
 			buildPhases = (
+				1B7DF142B5B7C638D17F92A7 /* [CP] Check Pods Manifest.lock */,
 				93FEFD0C1B9026C100A15E54 /* Sources */,
 				93FEFD0D1B9026C100A15E54 /* Frameworks */,
 				93FEFD0E1B9026C100A15E54 /* Resources */,
 				934193531BA3CB3100473AED /* Embed App Extensions */,
 				934193791BA3CC4600473AED /* Embed Frameworks */,
+				58B4420C4639F54203E7F250 /* [CP] Embed Pods Frameworks */,
+				0B2B1F08F5EB873EDB7A5706 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				93FBA9591BEDAD46008CB4D8 /* PBXTargetDependency */,
 				934193731BA3CC4600473AED /* PBXTargetDependency */,
-				D672A4131EE12DCF0049B491 /* PBXTargetDependency */,
-				D672A41B1EE12DE40049B491 /* PBXTargetDependency */,
+				D637D3BE1EE1407C00D5C142 /* PBXTargetDependency */,
 			);
 			name = "ZeroTier One";
 			productName = "ZeroTier One";
@@ -1021,9 +1034,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93FEFDC21B92902900A15E54 /* Build configuration list for PBXNativeTarget "libZeroTier" */;
 			buildPhases = (
+				6E46171D65CE55356FF3F51B /* [CP] Check Pods Manifest.lock */,
 				93FEFDB61B92902900A15E54 /* Sources */,
 				93FEFDB71B92902900A15E54 /* Frameworks */,
 				93FEFDB81B92902900A15E54 /* CopyFiles */,
+				BC8830DFCF58D490FAC660A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1105,12 +1120,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = D672A4051EE12DA90049B491 /* Products */;
-					ProjectRef = D672A4041EE12DA90049B491 /* CocoaAsyncSocket.xcodeproj */;
-				},
-				{
-					ProductGroup = D672A3D21EE12DA40049B491 /* Products */;
-					ProjectRef = D672A3D11EE12DA40049B491 /* Lumberjack.xcodeproj */;
+					ProductGroup = D637D3891EE13FE400D5C142 /* Products */;
+					ProjectRef = D637D3881EE13FE400D5C142 /* Lumberjack.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1125,137 +1136,116 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		D672A3E51EE12DA40049B491 /* libCocoaLumberjack.a */ = {
+		D637D39C1EE13FE400D5C142 /* libCocoaLumberjack.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libCocoaLumberjack.a;
-			remoteRef = D672A3E41EE12DA40049B491 /* PBXContainerItemProxy */;
+			remoteRef = D637D39B1EE13FE400D5C142 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D672A3E71EE12DA40049B491 /* CocoaLumberjack.framework */ = {
+		D637D39E1EE13FE400D5C142 /* CocoaLumberjack.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CocoaLumberjack.framework;
-			remoteRef = D672A3E61EE12DA40049B491 /* PBXContainerItemProxy */;
+			remoteRef = D637D39D1EE13FE400D5C142 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D672A3E91EE12DA40049B491 /* CocoaLumberjack.framework */ = {
+		D637D3A01EE13FE400D5C142 /* CocoaLumberjack.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CocoaLumberjack.framework;
-			remoteRef = D672A3E81EE12DA40049B491 /* PBXContainerItemProxy */;
+			remoteRef = D637D39F1EE13FE400D5C142 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D672A3EB1EE12DA40049B491 /* CocoaLumberjack.framework */ = {
+		D637D3A21EE13FE400D5C142 /* CocoaLumberjack.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CocoaLumberjack.framework;
-			remoteRef = D672A3EA1EE12DA40049B491 /* PBXContainerItemProxy */;
+			remoteRef = D637D3A11EE13FE400D5C142 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D672A3ED1EE12DA40049B491 /* CocoaLumberjack.framework */ = {
+		D637D3A41EE13FE400D5C142 /* CocoaLumberjack.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CocoaLumberjack.framework;
-			remoteRef = D672A3EC1EE12DA40049B491 /* PBXContainerItemProxy */;
+			remoteRef = D637D3A31EE13FE400D5C142 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D672A3EF1EE12DA40049B491 /* CocoaLumberjackSwift.framework */ = {
+		D637D3A61EE13FE400D5C142 /* CocoaLumberjackSwift.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CocoaLumberjackSwift.framework;
-			remoteRef = D672A3EE1EE12DA40049B491 /* PBXContainerItemProxy */;
+			remoteRef = D637D3A51EE13FE400D5C142 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D672A3F11EE12DA40049B491 /* CocoaLumberjackSwift.framework */ = {
+		D637D3A81EE13FE400D5C142 /* CocoaLumberjackSwift.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CocoaLumberjackSwift.framework;
-			remoteRef = D672A3F01EE12DA40049B491 /* PBXContainerItemProxy */;
+			remoteRef = D637D3A71EE13FE400D5C142 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D672A3F31EE12DA40049B491 /* CocoaLumberjackSwift.framework */ = {
+		D637D3AA1EE13FE400D5C142 /* CocoaLumberjackSwift.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CocoaLumberjackSwift.framework;
-			remoteRef = D672A3F21EE12DA40049B491 /* PBXContainerItemProxy */;
+			remoteRef = D637D3A91EE13FE400D5C142 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D672A3F51EE12DA40049B491 /* CocoaLumberjackSwift.framework */ = {
+		D637D3AC1EE13FE400D5C142 /* CocoaLumberjackSwift.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CocoaLumberjackSwift.framework;
-			remoteRef = D672A3F41EE12DA40049B491 /* PBXContainerItemProxy */;
+			remoteRef = D637D3AB1EE13FE400D5C142 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D672A3F71EE12DA40049B491 /* iOSLibStaticTest.app */ = {
+		D637D3AE1EE13FE400D5C142 /* iOSLibStaticTest.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = iOSLibStaticTest.app;
-			remoteRef = D672A3F61EE12DA40049B491 /* PBXContainerItemProxy */;
+			remoteRef = D637D3AD1EE13FE400D5C142 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D672A3F91EE12DA40049B491 /* FmwkTest.app */ = {
+		D637D3B01EE13FE400D5C142 /* FmwkTest.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = FmwkTest.app;
-			remoteRef = D672A3F81EE12DA40049B491 /* PBXContainerItemProxy */;
+			remoteRef = D637D3AF1EE13FE400D5C142 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D672A3FB1EE12DA40049B491 /* iOSSwiftTest.app */ = {
+		D637D3B21EE13FE400D5C142 /* iOSSwiftTest.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = iOSSwiftTest.app;
-			remoteRef = D672A3FA1EE12DA40049B491 /* PBXContainerItemProxy */;
+			remoteRef = D637D3B11EE13FE400D5C142 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D672A3FD1EE12DA40049B491 /* SwiftTest.app */ = {
+		D637D3B41EE13FE400D5C142 /* SwiftTest.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = SwiftTest.app;
-			remoteRef = D672A3FC1EE12DA40049B491 /* PBXContainerItemProxy */;
+			remoteRef = D637D3B31EE13FE400D5C142 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D672A3FF1EE12DA40049B491 /* tvOSSwiftTest.app */ = {
+		D637D3B61EE13FE400D5C142 /* tvOSSwiftTest.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = tvOSSwiftTest.app;
-			remoteRef = D672A3FE1EE12DA40049B491 /* PBXContainerItemProxy */;
+			remoteRef = D637D3B51EE13FE400D5C142 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D672A4011EE12DA40049B491 /* watchOSSwiftTest.app */ = {
+		D637D3B81EE13FE400D5C142 /* watchOSSwiftTest.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = watchOSSwiftTest.app;
-			remoteRef = D672A4001EE12DA40049B491 /* PBXContainerItemProxy */;
+			remoteRef = D637D3B71EE13FE400D5C142 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D672A4031EE12DA40049B491 /* watchOSSwiftTest Extension.appex */ = {
+		D637D3BA1EE13FE400D5C142 /* watchOSSwiftTest Extension.appex */ = {
 			isa = PBXReferenceProxy;
 			fileType = "wrapper.app-extension";
 			path = "watchOSSwiftTest Extension.appex";
-			remoteRef = D672A4021EE12DA40049B491 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D672A40B1EE12DA90049B491 /* CocoaAsyncSocket.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CocoaAsyncSocket.framework;
-			remoteRef = D672A40A1EE12DA90049B491 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D672A40D1EE12DA90049B491 /* CocoaAsyncSocket.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CocoaAsyncSocket.framework;
-			remoteRef = D672A40C1EE12DA90049B491 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D672A40F1EE12DA90049B491 /* CocoaAsyncSocket.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CocoaAsyncSocket.framework;
-			remoteRef = D672A40E1EE12DA90049B491 /* PBXContainerItemProxy */;
+			remoteRef = D637D3B91EE13FE400D5C142 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1293,6 +1283,189 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B2B1F08F5EB873EDB7A5706 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZeroTier One/Pods-ZeroTier One-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B7DF142B5B7C638D17F92A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		561445569A8F18B7A6E9E9C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		58B4420C4639F54203E7F250 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZeroTier One/Pods-ZeroTier One-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6683C6346CCE9BDEF00045F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6E46171D65CE55356FF3F51B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7EBFF7987619F486F6C7820E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8B9D42A74551CAC11AAE3272 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZeroTier/Pods-ZeroTier-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D1F2ECFF1143475F18F2E6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZeroTierTests/Pods-ZeroTierTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B80EE7E122CCFE076B488879 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZeroTierTests/Pods-ZeroTierTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC8830DFCF58D490FAC660A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-libZeroTier/Pods-libZeroTier-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC847A6EA3070731DAAC5F95 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZeroTierPTP/Pods-ZeroTierPTP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		934193421BA3CB3100473AED /* Sources */ = {
@@ -1434,15 +1607,10 @@
 			target = 934193451BA3CB3100473AED /* ZeroTierPTP */;
 			targetProxy = 93FBA9581BEDAD46008CB4D8 /* PBXContainerItemProxy */;
 		};
-		D672A4131EE12DCF0049B491 /* PBXTargetDependency */ = {
+		D637D3BE1EE1407C00D5C142 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "iOS CocoaAsyncSocket";
-			targetProxy = D672A4121EE12DCF0049B491 /* PBXContainerItemProxy */;
-		};
-		D672A41B1EE12DE40049B491 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "CocoaLumberjackSwift-iOS";
-			targetProxy = D672A41A1EE12DE40049B491 /* PBXContainerItemProxy */;
+			name = "CocoaLumberjack-iOS";
+			targetProxy = D637D3BD1EE1407C00D5C142 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1468,6 +1636,7 @@
 /* Begin XCBuildConfiguration section */
 		934193511BA3CB3100473AED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99002C7350F1318CBAFA101B /* Pods-ZeroTierPTP.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ZeroTierPTP/ZeroTierPTP.entitlements;
@@ -1496,6 +1665,7 @@
 		};
 		934193521BA3CB3100473AED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA0309E610332985CD6FBBE5 /* Pods-ZeroTierPTP.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ZeroTierPTP/ZeroTierPTP.entitlements;
@@ -1521,6 +1691,7 @@
 		};
 		934193771BA3CC4600473AED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 950A8D7864184866095FF189 /* Pods-ZeroTier.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1550,6 +1721,7 @@
 		};
 		934193781BA3CC4600473AED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 744A32429005351E3965EAC2 /* Pods-ZeroTier.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1578,6 +1750,7 @@
 		};
 		9341937B1BA3CC4600473AED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AB3DD9899E178D7ADF3678B /* Pods-ZeroTierTests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ZeroTierTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1590,6 +1763,7 @@
 		};
 		9341937C1BA3CC4600473AED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93391B9BA39654A0F92579EB /* Pods-ZeroTierTests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ZeroTierTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1690,8 +1864,8 @@
 		};
 		93FEFD391B9026C300A15E54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E9FE091DA3A993BBFEA131F /* Pods-ZeroTier One.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1730,8 +1904,8 @@
 		};
 		93FEFD3A1B9026C300A15E54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C52D5350C0CDBAB127CE5CFE /* Pods-ZeroTier One.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1763,6 +1937,7 @@
 		};
 		93FEFDC01B92902900A15E54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 994090735EAB42AF1F36310C /* Pods-libZeroTier.debug.xcconfig */;
 			buildSettings = {
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1780,6 +1955,7 @@
 		};
 		93FEFDC11B92902900A15E54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D94C48B0C3C3AC694C37681 /* Pods-libZeroTier.release.xcconfig */;
 			buildSettings = {
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (

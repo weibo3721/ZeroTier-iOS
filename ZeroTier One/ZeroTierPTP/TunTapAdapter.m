@@ -81,7 +81,7 @@
 
     if (destNetwork == 0) {
         NSString *destAddressString = sockaddr_getString(destAddr);
-        DDLogError(@"Unable to find network for IPv4 destination: %@", destAddressString);
+        //DDLogError(@"Unable to find network for IPv4 destination: %@", destAddressString);
         return;
     }
 
@@ -150,7 +150,7 @@
     NSString *destAddressString = sockaddr_getString(destAddr);
 
     if (destNetwork == 0) {
-        DDLogError(@"Unable to find network for IPv6 destination: %@", destAddressString);
+        //DDLogError(@"Unable to find network for IPv6 destination: %@", destAddressString);
         return;
     }
 
@@ -236,7 +236,7 @@
 
 - (void)handleUnknownPacket:(NSData*)packet {
     (void)packet;
-    DDLogError(@"Unknown protocol for packet");
+    //DDLogError(@"Unknown protocol for packet");
 }
 
 - (NSString*)uint64ToHex:(UInt64)value {
@@ -258,7 +258,7 @@
             [self onIPv6FrameReceived:networkId sourceMac:sourceMac destMac:destMac data:data];
             break;
         default:
-            DDLogError(@"Unknown etherType: %ud", etherType);
+            //DDLogError(@"Unknown etherType: %ud", etherType);
             break;
     }
 }

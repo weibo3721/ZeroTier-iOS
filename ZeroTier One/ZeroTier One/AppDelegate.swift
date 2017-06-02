@@ -89,7 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ZTVPNManager.sharedManager().loadVpnSettings { newManagers, error in
 
                 if error != nil {
-                    DDLogError("\(String(describing: error))")
+                    //DDLogError("\(String(describing: error))")
                     return
                 }
 

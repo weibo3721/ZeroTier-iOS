@@ -93,7 +93,7 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
         });
     }
     else {
-        DDLogError(@"Error starting node");
+        //DDLogError(@"Error starting node");
         [_udpCom shutdown];
 
         [_ptp errorStartingNode:@"Node initialization failed"];
@@ -108,7 +108,7 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
 }
 
 - (void)onIdentityCollision {
-    DDLogError(@"Identity collision. Removing public/private key pair");
+    //DDLogError(@"Identity collision. Removing public/private key pair");
 
     [self stopService];
 
@@ -132,7 +132,7 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
                 _runServiceCompletionHandler = nil;
             }
             else {
-                DDLogError(@"Got ZT_ONLINE but completion handler is nil!");
+                //DDLogError(@"Got ZT_ONLINE but completion handler is nil!");
             }
             break;
         case ZT_EVENT_OFFLINE:
@@ -373,7 +373,7 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
         __weak typeof(self) weakSelf = self;
         [_ptp setTunnelNetworkSettings:settings completionHandler:^(NSError * _Nullable error) {
             if (error) {
-                DDLogError(@"%@", error);
+                //DDLogError(@"%@", error);
                 return;
             }
 

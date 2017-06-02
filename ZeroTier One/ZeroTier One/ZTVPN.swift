@@ -59,7 +59,7 @@ class ZTVPN_Device : ZTVPN {
     override func save() {
         saveWithCompletionHandler() { (error) -> Void in
             if let e = error {
-                DDLogError("\(e)")
+                //DDLogError("\(e)")
                 return
             }
         }

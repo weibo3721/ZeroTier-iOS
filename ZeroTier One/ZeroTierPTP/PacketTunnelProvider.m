@@ -39,7 +39,7 @@
              object:_reachability];
 
     if ([_reachability startNotifier] != YES) {
-        DDLogError(@"Couldn't start reachability task");
+        //DDLogError(@"Couldn't start reachability task");
     }
 
     _service = [[OneService alloc] initWithPTP:self
@@ -138,13 +138,13 @@
                                                            error:&error];
 
     if (error) {
-        DDLogError(@"Error deserializing JSON data: %@", error);
+        //DDLogError(@"Error deserializing JSON data: %@", error);
         return;
     }
 
     NSString *request = [dict objectForKey:@"request"];
     if (!request) {
-        DDLogError(@"No request in JSON data");
+        //DDLogError(@"No request in JSON data");
         return;
     }
 
@@ -160,7 +160,7 @@
                                                                      error:&error];
 
             if (error) {
-                DDLogError(@"Error serializing response: %@", error);
+                //DDLogError(@"Error serializing response: %@", error);
                 return;
             }
 
@@ -169,7 +169,7 @@
             }
         }
         else {
-            DDLogError(@"Unable to find \"networkid\" element");
+            //DDLogError(@"Unable to find \"networkid\" element");
             return;
         }
     }
@@ -179,7 +179,7 @@
             NSNumber *deviceId = [NSNumber numberWithUnsignedLongLong:[_service getDeviceID]];
 
             if (deviceId == nil) {
-                DDLogError(@"Unable to retrieve device ID from service");
+                //DDLogError(@"Unable to retrieve device ID from service");
                 return;
             }
 
@@ -190,7 +190,7 @@
                                                                      error:&error];
 
             if (error) {
-                DDLogError(@"Error serializing device ID response: %@", error);
+                //DDLogError(@"Error serializing device ID response: %@", error);
                 return;
             }
 
@@ -199,11 +199,11 @@
             }
         }
         else {
-            DDLogError(@"_service is nil!");
+            //DDLogError(@"_service is nil!");
         }
     }
     else {
-        DDLogError(@"Unknown command: %@", request);
+        //DDLogError(@"Unknown command: %@", request);
     }
 }
 

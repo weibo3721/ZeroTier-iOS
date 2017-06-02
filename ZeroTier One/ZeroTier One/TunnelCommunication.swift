@@ -27,16 +27,16 @@ class TunnelCommunication {
                         return
                     }
                     catch {
-                        DDLogError("Error converting response data to dictionary: \(error)")
+                        //DDLogError("Error converting response data to dictionary: \(error)")
                     }
                 }
             }
             catch {
-                DDLogError("Error communicating with tunnel: \(error)")
+                //DDLogError("Error communicating with tunnel: \(error)")
             }
         }
         catch {
-            DDLogError("Error converting message to JSON: \(error)")
+            //DDLogError("Error converting message to JSON: \(error)")
         }
     }
 }

@@ -12,7 +12,7 @@
 #import "NodeStatus.h"
 #import "Peer.h"
 
-@import CocoaLumberjack;
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 #if DEBUG
 static const DDLogLevel ddLogLevel = DDLogLevelAll;

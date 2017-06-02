@@ -84,7 +84,7 @@ class NetworkTableCell: UITableViewCell {
                 vpnManager.setEnabled(true)
                 vpnManager.saveWithCompletionHandler() { (error) -> Void in
                     if let e = error {
-                        DDLogError("\(e)")
+                        //DDLogError("\(e)")
                         return
                     }
 
@@ -94,7 +94,7 @@ class NetworkTableCell: UITableViewCell {
                         try self.vpnManager.startVpn()
                     }
                     catch let error {
-                        DDLogError("Unkown error starting VPN: \(error)")
+                        //DDLogError("Unkown error starting VPN: \(error)")
                     }
                 }
             }

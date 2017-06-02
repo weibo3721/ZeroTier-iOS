@@ -113,7 +113,7 @@ class NetworkListViewController: UITableViewController {
                 handler: { (action) -> Void in
                     network.remove() { (error) -> Void in
                         if error != nil {
-                            DDLogError("Error removing network: \(String(describing: error))")
+                            //DDLogError("Error removing network: \(String(describing: error))")
                             return
                         }
                         let index = self.vpnManagers.index(of: network)
@@ -170,7 +170,7 @@ class NetworkListViewController: UITableViewController {
             }
         }
         else {
-            DDLogError("Unknown segue identifier")
+            //DDLogError("Unknown segue identifier")
         }
     }
 
@@ -244,13 +244,13 @@ class NetworkListViewController: UITableViewController {
 
         newManager.saveToPreferences() { error in
             if error != nil {
-                DDLogError("Error adding new network: \(String(describing: error))")
+                //DDLogError("Error adding new network: \(String(describing: error))")
             }
 
             ZTVPNManager.sharedManager().loadVpnSettings() { newManagers, error in
                 
                 if error != nil {
-                    DDLogError("\(String(describing: error))")
+                    //DDLogError("\(String(describing: error))")
                     return
                 }
               
@@ -260,7 +260,7 @@ class NetworkListViewController: UITableViewController {
                     }
                 }
                 else {
-                    DDLogError("No managers loaded")
+                    //DDLogError("No managers loaded")
                 }
             }
 
@@ -349,13 +349,13 @@ class NetworkListViewController: UITableViewController {
 
                             m.saveWithCompletionHandler() { (error) in
                                 if error != nil {
-                                    DDLogError("\(String(describing: error))")
+                                    //DDLogError("\(String(describing: error))")
                                 }
                                 else {
                                     ZTVPNManager.sharedManager().loadVpnSettings() { newManagers, error in
 
                                         if error != nil {
-                                            DDLogError("\(String(describing: error))")
+                                            //DDLogError("\(String(describing: error))")
                                             return
                                         }
 
@@ -365,7 +365,7 @@ class NetworkListViewController: UITableViewController {
                                             }
                                         }
                                         else {
-                                            DDLogError("No managers loaded")
+                                            //DDLogError("No managers loaded")
                                         }
                                     }
                                 }
