@@ -1,0 +1,6 @@
+framework module Pods_ZeroTier_One {
+  umbrella header "Pods-ZeroTier One-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,26 @@
+PODS:
+  - CocoaAsyncSocket (7.6.1)
+  - CocoaLumberjack (3.2.0):
+    - CocoaLumberjack/Default (= 3.2.0)
+    - CocoaLumberjack/Extensions (= 3.2.0)
+  - CocoaLumberjack/Default (3.2.0)
+  - CocoaLumberjack/Extensions (3.2.0):
+    - CocoaLumberjack/Default
+  - CocoaLumberjack/Swift (3.2.0):
+    - CocoaLumberjack/Default
+  - GoogleAnalytics (3.17.0)
+
+DEPENDENCIES:
+  - CocoaAsyncSocket
+  - CocoaLumberjack
+  - CocoaLumberjack/Swift
+  - GoogleAnalytics
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: 7eadd3f59e1a6c84e2aefc93e9ff7b55156fe174
+  CocoaLumberjack: 9b4aed7073d242f29cc2f62068d995faf67f703a
+  GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
+
+PODFILE CHECKSUM: eef642eb56dc30b6882359568bed62133010b8fd
+
+COCOAPODS: 1.2.0
