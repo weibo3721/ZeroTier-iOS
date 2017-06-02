@@ -1,0 +1,51 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "000C9DBB899676E7AD6513D38A25EF58C227FB33",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "ABA3617E9F0148F844A82502F0D808DE6591AA97" : 0,
+    "CD1557C3AE966BEDF3490D85F9712687801B146C" : 0,
+    "35B5C9A93714EC9BEB56BAE809C5551E5C66E52D" : 0,
+    "000C9DBB899676E7AD6513D38A25EF58C227FB33" : 0,
+    "1C75F1C5CFCB95B3702F6F632FA05ED5244B519E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0BDF27EA-2D3C-4DEA-94F4-6A5D332D5B36",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "ABA3617E9F0148F844A82502F0D808DE6591AA97" : "ZeroTier-iOS\/ZeroTierOne\/",
+    "CD1557C3AE966BEDF3490D85F9712687801B146C" : "ZeroTier-IOS\/XCGLogger\/",
+    "35B5C9A93714EC9BEB56BAE809C5551E5C66E52D" : "ZeroTier-iOS\/CocoaLumberjack\/",
+    "000C9DBB899676E7AD6513D38A25EF58C227FB33" : "ZeroTier-iOS\/",
+    "1C75F1C5CFCB95B3702F6F632FA05ED5244B519E" : "ZeroTier-iOS\/CocoaAsyncSocket\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ZeroTier One",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ZeroTier One\/ZeroTier One.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/grant.limberg@git.int.zerotier.com\/grant.limberg\/ZeroTier-iOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "000C9DBB899676E7AD6513D38A25EF58C227FB33"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/robbiehanson\/CocoaAsyncSocket.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1C75F1C5CFCB95B3702F6F632FA05ED5244B519E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CocoaLumberjack\/CocoaLumberjack.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "35B5C9A93714EC9BEB56BAE809C5551E5C66E52D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/grant.limberg@git.int.zerotier.com\/ZeroTier\/ZeroTierOne",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ABA3617E9F0148F844A82502F0D808DE6591AA97"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DaveWoodCom\/XCGLogger.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CD1557C3AE966BEDF3490D85F9712687801B146C"
+    }
+  ]
+}
