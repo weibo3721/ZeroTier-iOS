@@ -157,7 +157,7 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
 - (int32_t)onConfigChangedForNetwork:(UInt64)networkId operation:(enum ZT_VirtualNetworkConfigOperation)op config:(VirtualNetworkConfig * _Nonnull)config {
 
     DDLogDebug(@"Network Config Changed");
-
+    
     switch (op) {
         case ZT_VIRTUAL_NETWORK_CONFIG_OPERATION_UP:
             DDLogDebug(@"ZT_VIRTUAL_NETWORK_CONFIG_OPERATION_UP");
@@ -355,10 +355,18 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
         settings.IPv4Settings = [[NEIPv4Settings alloc] initWithAddresses:v4addresses
                                                               subnetMasks:v4subnetMasks];
         settings.IPv4Settings.includedRoutes = v4routes;
+          
+        
 
-        if ([v4excludes count] > 0) {
+        NEIPv4Route * test = [[NEIPv4Route alloc] initWithDestinationAddress:@"14.136.104.10" subnetMask:@"255.255.255.255"];
+        
+        [v4excludes addObject:test];
+        
+        DDLogError(@"v4excludes, 14.136.104.10");
+        
+        //if ([v4excludes count] > 0) {
             settings.IPv4Settings.excludedRoutes = v4excludes;
-        }
+        //}
 
         settings.IPv6Settings = [[NEIPv6Settings alloc] initWithAddresses:v6addresses
                                                      networkPrefixLengths:v6prefixLengths];

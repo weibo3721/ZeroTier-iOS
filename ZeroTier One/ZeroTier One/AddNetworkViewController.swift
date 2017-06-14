@@ -40,6 +40,8 @@ class AddNetworkViewController: UIViewController, UITextFieldDelegate {
             idButton.tintColor = UIColor.white
             self.setToolbarItems([idButton], animated: true)
         }
+        
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {

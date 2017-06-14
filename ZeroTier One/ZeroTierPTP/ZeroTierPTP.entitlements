@@ -18,7 +18,7 @@
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)com.zerotier.ZeroTier-One.ZeroTierPTP</string>
+		<string>$(AppIdentifierPrefix)com.tunnel.unique.ZeroTierPTP</string>
 	</array>
 </dict>
 </plist>

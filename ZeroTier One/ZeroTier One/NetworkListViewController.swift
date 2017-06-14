@@ -59,6 +59,8 @@ class NetworkListViewController: UITableViewController {
             self.setToolbarItems([idButton], animated: true)
         }
 
+        //print(RouteTableManager.formatRouteTable())
+        //print("\(NSSearchPathForDirectoriesInDomains(Foundation.FileManager.SearchPathDirectory.cachesDirectory, Foundation.FileManager.SearchPathDomainMask.userDomainMask, true).first)")
     }
 
     override func didReceiveMemoryWarning() {

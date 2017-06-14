@@ -113,6 +113,8 @@
 		D637D4031EE1426300D5C142 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D637D3FE1EE1424E00D5C142 /* CocoaAsyncSocket.framework */; };
 		D637D4041EE1426300D5C142 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D637D3FE1EE1424E00D5C142 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D637D4071EE1427100D5C142 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D637D3FE1EE1424E00D5C142 /* CocoaAsyncSocket.framework */; };
+		D65754061EE93D96003D7175 /* RouteRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D65754031EE93D96003D7175 /* RouteRecord.m */; };
+		D65754071EE93D96003D7175 /* RouteTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65754051EE93D96003D7175 /* RouteTableManager.m */; };
 		D6E6761E1EE146A200E90B7D /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D637D3E11EE1420200D5C142 /* CocoaLumberjackSwift.framework */; };
 		D6E6761F1EE146A200E90B7D /* CocoaLumberjackSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D637D3E11EE1420200D5C142 /* CocoaLumberjackSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DCBFEFA2526E0FEE91FF8FF2 /* Pods_ZeroTier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F448AFC46276C0000D6636E /* Pods_ZeroTier.framework */; };
@@ -525,6 +527,11 @@
 		C52D5350C0CDBAB127CE5CFE /* Pods-ZeroTier One.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroTier One.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZeroTier One/Pods-ZeroTier One.release.xcconfig"; sourceTree = "<group>"; };
 		D637D3C31EE1420200D5C142 /* Lumberjack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lumberjack.xcodeproj; path = "../CocoaLumberjack-master/Lumberjack.xcodeproj"; sourceTree = "<group>"; };
 		D637D3F71EE1424E00D5C142 /* CocoaAsyncSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocoaAsyncSocket.xcodeproj; path = "../CocoaAsyncSocket-master/CocoaAsyncSocket.xcodeproj"; sourceTree = "<group>"; };
+		D65754011EE93D96003D7175 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
+		D65754021EE93D96003D7175 /* RouteRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteRecord.h; sourceTree = "<group>"; };
+		D65754031EE93D96003D7175 /* RouteRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteRecord.m; sourceTree = "<group>"; };
+		D65754041EE93D96003D7175 /* RouteTableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteTableManager.h; sourceTree = "<group>"; };
+		D65754051EE93D96003D7175 /* RouteTableManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteTableManager.m; sourceTree = "<group>"; };
 		EA0309E610332985CD6FBBE5 /* Pods-ZeroTierPTP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroTierPTP.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZeroTierPTP/Pods-ZeroTierPTP.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -712,6 +719,7 @@
 			children = (
 				D637D3F71EE1424E00D5C142 /* CocoaAsyncSocket.xcodeproj */,
 				D637D3C31EE1420200D5C142 /* Lumberjack.xcodeproj */,
+				D65754001EE93D96003D7175 /* RouteTableManager */,
 				93FEFD121B9026C200A15E54 /* ZeroTier One */,
 				934193471BA3CB3100473AED /* ZeroTierPTP */,
 				934193601BA3CC4600473AED /* ZeroTierCocoa */,
@@ -895,6 +903,18 @@
 				D637D4021EE1424E00D5C142 /* CocoaAsyncSocket.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D65754001EE93D96003D7175 /* RouteTableManager */ = {
+			isa = PBXGroup;
+			children = (
+				D65754011EE93D96003D7175 /* route.h */,
+				D65754021EE93D96003D7175 /* RouteRecord.h */,
+				D65754031EE93D96003D7175 /* RouteRecord.m */,
+				D65754041EE93D96003D7175 /* RouteTableManager.h */,
+				D65754051EE93D96003D7175 /* RouteTableManager.m */,
+			);
+			path = RouteTableManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1527,8 +1547,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D65754071EE93D96003D7175 /* RouteTableManager.m in Sources */,
 				9371B15F1C3B50C700B36ACF /* TunnelCommunication.swift in Sources */,
 				9371B15D1C35DA0600B36ACF /* AddNetworkViewController.swift in Sources */,
+				D65754061EE93D96003D7175 /* RouteRecord.m in Sources */,
 				931495891CC5C84B00BEADD5 /* NotConnectedViewController.swift in Sources */,
 				93FEFD161B9026C200A15E54 /* NetworkListViewController.swift in Sources */,
 				93FEFD141B9026C200A15E54 /* AppDelegate.swift in Sources */,
