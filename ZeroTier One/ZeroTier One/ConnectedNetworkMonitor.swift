@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import NetworkExtension
-import CocoaLumberjackSwift
 
 struct NetworkInfo {
     var networkId: String

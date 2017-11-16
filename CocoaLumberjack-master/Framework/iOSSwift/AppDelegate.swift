@@ -8,7 +8,6 @@
 
 import UIKit
 import CocoaLumberjack
-import CocoaLumberjackSwift
 
 let ddloglevel = DDLogLevel.verbose
 
@@ -17,7 +16,7 @@ private func printSomething() {
     DDLogDebug("Debug");
     DDLogInfo("Info");
     DDLogWarn("Warn");
-    DDLogError("Error");
+    //DDLogError("Error");
 }
 
 @UIApplicationMain
@@ -34,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DDLogDebug("Debug");
         DDLogInfo("Info");
         DDLogWarn("Warn");
-        DDLogError("Error");
+        //DDLogError("Error");
         
         printSomething()
         

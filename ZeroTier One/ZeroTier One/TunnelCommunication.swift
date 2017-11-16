@@ -8,11 +8,11 @@
 
 import Foundation
 import NetworkExtension
-import CocoaLumberjackSwift
 
 class TunnelCommunication {
     class func sendRequest(_ session: NETunnelProviderSession, message: NSDictionary, responseHandler: @escaping (([String:AnyObject]?) -> Void)) {
         do {
+            print("sendRequest",message.description)
             let jsonData = try JSONSerialization.data(withJSONObject: message, options: JSONSerialization.WritingOptions(rawValue: 0))
             do {
                 try session.sendProviderMessage(jsonData) { (data: Data?) -> Void in
@@ -23,20 +23,21 @@ class TunnelCommunication {
 
                     do {
                         let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String:AnyObject]
+                        print("json",json)
                         responseHandler(json)
                         return
                     }
                     catch {
-                        //DDLogError("Error converting response data to dictionary: \(error)")
+                        print("Error converting response data to dictionary: \(error)")
                     }
                 }
             }
             catch {
-                //DDLogError("Error communicating with tunnel: \(error)")
+                print("Error communicating with tunnel: \(error)")
             }
         }
         catch {
-            //DDLogError("Error converting message to JSON: \(error)")
+            print("Error converting message to JSON: \(error)")
         }
     }
 }

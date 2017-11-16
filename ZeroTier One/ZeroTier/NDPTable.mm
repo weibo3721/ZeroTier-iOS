@@ -14,13 +14,7 @@
 #import "AddressUtils.h"
 #import "OSUtils.hpp"
 
-#import <CocoaLumberjack/CocoaLumberjack.h>
 
-#if DEBUG
-static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
-#else
-static const DDLogLevel ddLogLevel = DDLogLevelWarning;
-#endif
 
 
 using namespace ZeroTier;
@@ -229,7 +223,7 @@ struct neighbor_entry {
         neighbor_entry *v = NULL;
         while(i.next(k, v)) {
             if((now - v->lastAccessed) >= ZT_ND_EXPIRE) {
-                DDLogDebug(@"Erasing MAC entry: %s", v->mac.toString().c_str());
+                //DDLogDebug(@"Erasing MAC entry: %s", v->mac.toString().c_str());
                 _cache.erase(*k);
             }
         }
@@ -256,7 +250,7 @@ struct neighbor_entry {
         neighbor_entry *v = NULL;
         while(i.next(k, v)) {
             if((now - v->lastAccessed) >= ZT_ND_EXPIRE) {
-                DDLogDebug(@"Erasing MAC entry: %s", v->mac.toString().c_str());
+                //DDLogDebug(@"Erasing MAC entry: %s", v->mac.toString().c_str());
                 _cache.erase(*k);
             }
         }

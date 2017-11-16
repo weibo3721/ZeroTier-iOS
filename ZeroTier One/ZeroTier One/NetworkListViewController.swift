@@ -8,7 +8,6 @@
 
 import UIKit
 import NetworkExtension
-import CocoaLumberjackSwift
 
 class NetworkListViewController: UITableViewController {
 
@@ -115,7 +114,7 @@ class NetworkListViewController: UITableViewController {
                 handler: { (action) -> Void in
                     network.remove() { (error) -> Void in
                         if error != nil {
-                            //DDLogError("Error removing network: \(String(describing: error))")
+                            ////DDLogError("Error removing network: \(String(describing: error))")
                             return
                         }
                         let index = self.vpnManagers.index(of: network)
@@ -152,16 +151,17 @@ class NetworkListViewController: UITableViewController {
         if let id = segue.identifier {
             switch id {
             case "NewNetwork":
-                DDLogDebug("Adding a new network")
+                break
+                //DDLogDebug("Adding a new network")
             case "ShowNetworkInfo":
-                DDLogDebug("Showing network info")
+                //DDLogDebug("Showing network info")
                 if let row = tableView.indexPathForSelectedRow?.row {
                     let network = vpnManagers[row]
                     let networkInfoView = segue.destination as! NetworkInfoViewController
                     networkInfoView.manager = network
                 }
             case "ShowNetworkNotConnected":
-                DDLogDebug("Show Network: Not Connected")
+                //DDLogDebug("Show Network: Not Connected")
                 if let row = tableView.indexPathForSelectedRow?.row {
                     let network = vpnManagers[row]
                     let networkInfoView = segue.destination as! NotConnectedViewController
@@ -172,7 +172,7 @@ class NetworkListViewController: UITableViewController {
             }
         }
         else {
-            //DDLogError("Unknown segue identifier")
+            ////DDLogError("Unknown segue identifier")
         }
     }
 
@@ -221,7 +221,7 @@ class NetworkListViewController: UITableViewController {
             let curNetworkId = mgr.getNetworkID().uint64Value
 
             if networkId == curNetworkId {
-                DDLogWarn("Configuration with network id \(networkId) already exists")
+                //DDLogWarn("Configuration with network id \(networkId) already exists")
                 TWStatus.show("Network already exists!")
                 TWStatus.dismiss(after: 3.0)
                 return
@@ -231,7 +231,7 @@ class NetworkListViewController: UITableViewController {
 
         let newManager = NETunnelProviderManager()
         let proto = NETunnelProviderProtocol()
-        proto.providerBundleIdentifier = "com.zerotier.ZeroTier-One.ZeroTierPTP"
+        proto.providerBundleIdentifier = "com.tunnel.unique.ZeroTierPTP"
         proto.serverAddress = "127.0.0.1"
 
         var config = [String:NSObject]()
@@ -246,13 +246,13 @@ class NetworkListViewController: UITableViewController {
 
         newManager.saveToPreferences() { error in
             if error != nil {
-                //DDLogError("Error adding new network: \(String(describing: error))")
+                ////DDLogError("Error adding new network: \(String(describing: error))")
             }
 
             ZTVPNManager.sharedManager().loadVpnSettings() { newManagers, error in
                 
                 if error != nil {
-                    //DDLogError("\(String(describing: error))")
+                    ////DDLogError("\(String(describing: error))")
                     return
                 }
               
@@ -262,7 +262,7 @@ class NetworkListViewController: UITableViewController {
                     }
                 }
                 else {
-                    //DDLogError("No managers loaded")
+                    ////DDLogError("No managers loaded")
                 }
             }
 
@@ -287,7 +287,7 @@ class NetworkListViewController: UITableViewController {
                             deviceId = "0\(deviceId)"
                         }
 
-                        DDLogDebug("Got device id: \(deviceId)")
+                        //DDLogDebug("Got device id: \(deviceId)")
                         self._deviceId = deviceId
 
                         let defaults = UserDefaults.standard
@@ -320,7 +320,7 @@ class NetworkListViewController: UITableViewController {
 
     func showCopy(_ sender: AnyObject) {
         if let id = _deviceId {
-            DDLogDebug("id \(id) copied!")
+            //DDLogDebug("id \(id) copied!")
             let pb = UIPasteboard.general
             pb.string = id
         }
@@ -351,13 +351,13 @@ class NetworkListViewController: UITableViewController {
 
                             m.saveWithCompletionHandler() { (error) in
                                 if error != nil {
-                                    //DDLogError("\(String(describing: error))")
+                                    ////DDLogError("\(String(describing: error))")
                                 }
                                 else {
                                     ZTVPNManager.sharedManager().loadVpnSettings() { newManagers, error in
 
                                         if error != nil {
-                                            //DDLogError("\(String(describing: error))")
+                                            ////DDLogError("\(String(describing: error))")
                                             return
                                         }
 
@@ -367,7 +367,7 @@ class NetworkListViewController: UITableViewController {
                                             }
                                         }
                                         else {
-                                            //DDLogError("No managers loaded")
+                                            ////DDLogError("No managers loaded")
                                         }
                                     }
                                 }

@@ -403,7 +403,7 @@ NSString * __nullable DDExtractFileNameWithoutExtension(const char *filePath, BO
  * `[DDLog addLogger:consoleLogger withLogLevel:DDLogLevelVerbose];`
  * `[DDLog addLogger:fileLogger    withLogLevel:DDLogLevelWarning];`
  *
- * `DDLogError(@"oh no");` => gets forwarded to consoleLogger & fileLogger
+ * `//DDLogError(@"oh no");` => gets forwarded to consoleLogger & fileLogger
  * `DDLogInfo(@"hi");`     => gets forwarded to consoleLogger only
  *
  * It is important to remember that Lumberjack uses a BITMASK.
@@ -441,7 +441,7 @@ NSString * __nullable DDExtractFileNameWithoutExtension(const char *filePath, BO
  * `[DDLog addLogger:consoleLogger withLogLevel:DDLogLevelVerbose];`
  * `[DDLog addLogger:fileLogger    withLogLevel:DDLogLevelWarning];`
  *
- * `DDLogError(@"oh no");` => gets forwarded to consoleLogger & fileLogger
+ * `//DDLogError(@"oh no");` => gets forwarded to consoleLogger & fileLogger
  * `DDLogInfo(@"hi");`     => gets forwarded to consoleLogger only
  *
  * It is important to remember that Lumberjack uses a BITMASK.

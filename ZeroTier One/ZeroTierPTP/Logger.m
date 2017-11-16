@@ -8,8 +8,3 @@
 
 #import "Logger.h"
 
-#if DEBUG
-const DDLogLevel ddLogLevel = DDLogLevelVerbose;
-#else
-const DDLogLevel ddLogLevel = DDLogLevelWarning;
-#endif

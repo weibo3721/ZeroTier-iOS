@@ -13,7 +13,6 @@
 #import "PacketTunnelProvider.h"
 
 #import <NetworkExtension/NetworkExtension.h>
-#import <CocoaLumberjack/CocoaLumberjack.h>
 
 @implementation TunTapAdapter
 
@@ -81,7 +80,7 @@
 
     if (destNetwork == 0) {
         NSString *destAddressString = sockaddr_getString(destAddr);
-        //DDLogError(@"Unable to find network for IPv4 destination: %@", destAddressString);
+        ////DDLogError(@"Unable to find network for IPv4 destination: %@", destAddressString);
         return;
     }
 
@@ -129,12 +128,12 @@
     UInt64 destMac = ARP_query(_arpTable, myMacAddress, srcInt, destInt, query, &queryLen, &queryDest);
 
     if (queryDest != 0 && queryLen != 0) {
-        DDLogDebug(@"Unknown MAC address. Sending ARP Request");
+        //DDLogDebug(@"Unknown MAC address. Sending ARP Request");
         NSData *queryData = [NSData dataWithBytes:query length:queryLen];
         [_node processVirtualNetworkFrameForNetwork:destNetwork sourceMac:myMacAddress destMac:queryDest etherType:ARP_PACKET vlanId:0 frameData:queryData];
     }
     else {
-        DDLogDebug(@"Sending %lu bytes to ZeroTier", packet.length);
+        //DDLogDebug(@"Sending %lu bytes to ZeroTier", packet.length);
         [_node processVirtualNetworkFrameForNetwork:destNetwork sourceMac:myMacAddress destMac:destMac etherType:IPV4_PACKET vlanId:0 frameData:packet];
     }
     free(query);
@@ -150,7 +149,7 @@
     NSString *destAddressString = sockaddr_getString(destAddr);
 
     if (destNetwork == 0) {
-        //DDLogError(@"Unable to find network for IPv6 destination: %@", destAddressString);
+        ////DDLogError(@"Unable to find network for IPv6 destination: %@", destAddressString);
         return;
     }
 
@@ -202,7 +201,7 @@
     }
     else if ([self isNeighborAdvertisement:packet]) {
         NSString *destStr = sockaddr_getString(destAddr);
-        DDLogDebug(@"Sending neighbor advertisement to %@", destStr);
+        //DDLogDebug(@"Sending neighbor advertisement to %@", destStr);
 
         if ([_ndTable hasMacForAddress:destAddr]) {
             destMac = [_ndTable macForAddress:destAddr];
@@ -212,11 +211,11 @@
     }
     else if ([_ndTable hasMacForAddress:destAddr]) {
         destMac = [_ndTable macForAddress:destAddr];
-        DDLogDebug(@"Found MAC to send packet to");
+        //DDLogDebug(@"Found MAC to send packet to");
     }
 
     if (destMac != 0) {
-        DDLogDebug(@"Sending %lu bytes to ZeroTier", packet.length);
+        //DDLogDebug(@"Sending %lu bytes to ZeroTier", packet.length);
         [_node processVirtualNetworkFrameForNetwork:destNetwork sourceMac:myMacAddress destMac:destMac etherType:IPV6_PACKET vlanId:0 frameData:packet];
     }
     else {
@@ -236,7 +235,7 @@
 
 - (void)handleUnknownPacket:(NSData*)packet {
     (void)packet;
-    //DDLogError(@"Unknown protocol for packet");
+    ////DDLogError(@"Unknown protocol for packet");
 }
 
 - (NSString*)uint64ToHex:(UInt64)value {
@@ -258,14 +257,14 @@
             [self onIPv6FrameReceived:networkId sourceMac:sourceMac destMac:destMac data:data];
             break;
         default:
-            //DDLogError(@"Unknown etherType: %ud", etherType);
+            ////DDLogError(@"Unknown etherType: %ud", etherType);
             break;
     }
 }
 
 - (void)onARPFrameReceived:(UInt64)networkId sourceMac:(UInt64)sourceMac destMac:(UInt64)destMac data:(NSData*)data {
     (void)destMac;
-    DDLogDebug(@"Received ARP Packet");
+    //DDLogDebug(@"Received ARP Packet");
 
     void *response = malloc(128);
     UInt32 responseLen = 0;
@@ -274,7 +273,7 @@
     ARP_processIncomingArp(_arpTable, data.bytes, (unsigned int)data.length, response, &responseLen, &responseDest);
 
     if (responseLen > 0) {
-        DDLogDebug(@"Sending ARP reply");
+        //DDLogDebug(@"Sending ARP reply");
         VirtualNetworkConfig *cfg = [_node networkConfig:networkId];
         NSData *arpReply = [NSData dataWithBytes:response length:responseLen];
 
@@ -291,7 +290,7 @@
     [packets addObject:data];
     [protocols addObject:[NSNumber numberWithInt:AF_INET]];
 
-    DDLogDebug(@"Writing %lud bytes to tunnel adapter", (unsigned long)data.length);
+    //DDLogDebug(@"Writing %lud bytes to tunnel adapter", (unsigned long)data.length);
     [_ptp.packetFlow writePackets:packets withProtocols:protocols];
 }
 
@@ -303,10 +302,10 @@
     [_ndTable addMac:sourceMac forAddress:sourceAddress];
 
     if ([self isNeighborSolicitation:data]) {
-        DDLogDebug(@"Got Neighbor Solicitaiton from ZT");
+        //DDLogDebug(@"Got Neighbor Solicitaiton from ZT");
     }
     else if ([self isNeighborAdvertisement:data]) {
-        DDLogDebug(@"Got Neighbor Advertisement from ZT");
+        //DDLogDebug(@"Got Neighbor Advertisement from ZT");
     }
 
     NSMutableArray<NSData*> *packets = [NSMutableArray array];

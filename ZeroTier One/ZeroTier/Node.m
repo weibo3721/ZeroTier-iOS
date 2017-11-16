@@ -12,12 +12,12 @@
 #import "NodeStatus.h"
 #import "Peer.h"
 
-#import <CocoaLumberjack/CocoaLumberjack.h>
+//#import <CocoaLumberjack/CocoaLumberjack.h>
 
 #if DEBUG
-static const DDLogLevel ddLogLevel = DDLogLevelAll;
+//static const DDLogLevel ddLogLevel = DDLogLevelAll;
 #else
-static const DDLogLevel ddLogLevel = DDLogLevelInfo;
+//static const DDLogLevel ddLogLevel = DDLogLevelInfo;
 #endif
 
 long DataStoreGetFunction(ZT_Node *native_node, void *userData, void *threadPtr, const char* objectName,
@@ -109,7 +109,7 @@ int WirePacketSendFunction(ZT_Node *native_node, void *userData, void *threadPtr
                            unsigned int ttl) {
 
     if(remoteAddress == NULL || memcmp(remoteAddress, &ZT_SOCKADDR_NULL, sizeof(struct sockaddr_storage)) == 0) {
-        DDLogError(@"Attempt to send to a null address");
+//        //DDLogError(@"Attempt to send to a null address");
         return 0;
     }
 
@@ -161,7 +161,7 @@ UInt64 now() {
                                             now());
         
         if (rc != ZT_RESULT_OK) {
-            DDLogError(@"Error initializing node");
+          //  //DDLogError(@"Error initializing node");
             return nil;
         }
 
@@ -191,7 +191,7 @@ UInt64 now() {
         _nextDeadline = 0;
         _deadlineMutex = [[NSObject alloc] init];
 
-        DDLogError(@"Node ID: 0x%llx", ZT_Node_address(_node));
+       // //DDLogError(@"Node ID: 0x%llx", ZT_Node_address(_node));
     }
 
     return self;
@@ -232,7 +232,7 @@ UInt64 now() {
 }
 
 - (void)onMemoryWarning:(NSNotification*)note {
-    DDLogError(@"Received memory warning");
+   // //DDLogError(@"Received memory warning");
 }
 
 - (UInt64)nextDeadline {
@@ -252,7 +252,7 @@ UInt64 now() {
                packetData:(NSData*)packetData {
 
     if(_node == NULL) {
-        DDLogError(@"Error: node is null");
+       // //DDLogError(@"Error: node is null");
         return;
     }
     
@@ -268,7 +268,7 @@ UInt64 now() {
                                                       &deadline);
 
     if(rc != ZT_RESULT_OK) {
-        DDLogError(@"Error calling processWirePacket: %d", rc);
+       // //DDLogError(@"Error calling processWirePacket: %d", rc);
         return;
     }
 
@@ -284,7 +284,7 @@ UInt64 now() {
 
 - (void)processBackgroundTasks {
     if(_node == NULL) {
-        DDLogError(@"Error: node is null");
+        ////DDLogError(@"Error: node is null");
         return;
     }
     
@@ -292,7 +292,7 @@ UInt64 now() {
     enum ZT_ResultCode rc = ZT_Node_processBackgroundTasks(_node, NULL, now(), &deadline);
 
     if(rc != ZT_RESULT_OK) {
-        DDLogError(@"Error calling processBackgroundTasks: %d", rc);
+        ////DDLogError(@"Error calling processBackgroundTasks: %d", rc);
         return;
     }
 
@@ -301,7 +301,7 @@ UInt64 now() {
 
 - (void)joinNetwork:(UInt64)networkId {
     if(_node == NULL) {
-        DDLogError(@"Error: node is null");
+        ////DDLogError(@"Error: node is null");
         return;
     }
     
@@ -310,7 +310,7 @@ UInt64 now() {
 
 - (void)leaveNetwork:(UInt64)networkId {
     if(_node == NULL) {
-        DDLogError(@"Error: node is null");
+        //DDLogError(@"Error: node is null");
         return;
     }
     
@@ -324,7 +324,7 @@ UInt64 now() {
                                       vlanId:(UInt32)vlanId
                                    frameData:(NSData*)frameData {
     if(_node == NULL) {
-        DDLogError(@"Error: node is null");
+        //DDLogError(@"Error: node is null");
         return;
     }
     
@@ -343,7 +343,7 @@ UInt64 now() {
                                                                &deadline);
 
     if(rc != ZT_RESULT_OK) {
-        DDLogError(@"Error on processVirtualNetworkFrame: %d", rc);
+        //DDLogError(@"Error on processVirtualNetworkFrame: %d", rc);
         return;
     }
 
@@ -354,7 +354,7 @@ UInt64 now() {
             multicastGroup:(UInt64)multicastGroup
               multicastAdi:(UInt32)adi {
     if(_node == NULL) {
-        DDLogError(@"Error: node is null");
+        //DDLogError(@"Error: node is null");
         return;
     }
     
@@ -362,7 +362,7 @@ UInt64 now() {
                                                        multicastGroup, adi);
 
     if(rc != ZT_RESULT_OK) {
-        DDLogError(@"Error joining multicast group: %d", rc);
+        //DDLogError(@"Error joining multicast group: %d", rc);
     }
 }
 
@@ -370,7 +370,7 @@ UInt64 now() {
               multicastGroup:(UInt64)multicastGroup
                 multicastAdi:(UInt32)adi {
     if(_node == NULL) {
-        DDLogError(@"Error: node is null");
+        //DDLogError(@"Error: node is null");
         return;
     }
     
@@ -378,13 +378,13 @@ UInt64 now() {
                                                          multicastGroup, adi);
 
     if(rc != ZT_RESULT_OK) {
-        DDLogError(@"Error leaving multicast group: %d", rc);
+        //DDLogError(@"Error leaving multicast group: %d", rc);
     }
 }
 
 - (UInt64)address {
     if(_node == NULL) {
-        DDLogError(@"Error: node is null");
+        //DDLogError(@"Error: node is null");
         return 0;
     }
     
@@ -393,7 +393,7 @@ UInt64 now() {
 
 - (NodeStatus*)status {
     if(_node == NULL) {
-        DDLogError(@"Error: node is null");
+        //DDLogError(@"Error: node is null");
         return nil;
     }
     
@@ -405,7 +405,7 @@ UInt64 now() {
 
 - (VirtualNetworkConfig*)networkConfig:(UInt64)networkId {
     if(_node == NULL) {
-        DDLogError(@"Error: node is null");
+        //DDLogError(@"Error: node is null");
         return nil;
     }
     
@@ -420,7 +420,7 @@ UInt64 now() {
 
 - (NSArray<Peer*>*)peers {
     if(_node == NULL) {
-        DDLogError(@"Error: node is null");
+        //DDLogError(@"Error: node is null");
         return [NSArray array];
     }
     
@@ -440,7 +440,7 @@ UInt64 now() {
 
 - (NSArray<VirtualNetworkConfig*>*)networks {
     if(_node == NULL) {
-        DDLogError(@"Error: node is null");
+        //DDLogError(@"Error: node is null");
         return [NSArray array];
     }
     

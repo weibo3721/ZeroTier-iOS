@@ -83,7 +83,7 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
                 }
                 usleep((UInt32)delay);
             }
-            DDLogDebug(@"Ended runService run loop");
+            //DDLogDebug(@"Ended runService run loop");
 
             [_node shutdown];
             [_udpCom shutdown];
@@ -93,7 +93,7 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
         });
     }
     else {
-        //DDLogError(@"Error starting node");
+        ////DDLogError(@"Error starting node");
         [_udpCom shutdown];
 
         [_ptp errorStartingNode:@"Node initialization failed"];
@@ -101,14 +101,14 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
 }
 
 - (void)stopService {
-    DDLogDebug(@"stopService called");
+    //DDLogDebug(@"stopService called");
     if (_isRunning) {
         _isRunning = false;
     }
 }
 
 - (void)onIdentityCollision {
-    //DDLogError(@"Identity collision. Removing public/private key pair");
+    ////DDLogError(@"Identity collision. Removing public/private key pair");
 
     [self stopService];
 
@@ -120,23 +120,23 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
 - (void)onEvent:(enum ZT_Event)event {
     switch (event) {
         case ZT_EVENT_UP:
-            DDLogDebug(@"ZT UP");
+            //DDLogDebug(@"ZT UP");
             break;
         case ZT_EVENT_DOWN:
-            DDLogDebug(@"ZT DOWN");
+            //DDLogDebug(@"ZT DOWN");
             break;
         case ZT_EVENT_ONLINE:
-            DDLogDebug(@"ZT ONLINE");
+            //DDLogDebug(@"ZT ONLINE");
             if (_runServiceCompletionHandler != nil) {
                 _runServiceCompletionHandler();
                 _runServiceCompletionHandler = nil;
             }
             else {
-                //DDLogError(@"Got ZT_ONLINE but completion handler is nil!");
+                ////DDLogError(@"Got ZT_ONLINE but completion handler is nil!");
             }
             break;
         case ZT_EVENT_OFFLINE:
-            DDLogDebug(@"ZT OFFLINE");
+            //DDLogDebug(@"ZT OFFLINE");
             break;
         case ZT_EVENT_FATAL_ERROR_IDENTITY_COLLISION:
             [self onIdentityCollision];
@@ -151,25 +151,25 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
 }
 
 - (void)onTrace:(NSString * _Nonnull )message {
-    DDLogDebug(@"%@", message);
+   // DDLogDebug(@"%@", message);
 }
 
 - (int32_t)onConfigChangedForNetwork:(UInt64)networkId operation:(enum ZT_VirtualNetworkConfigOperation)op config:(VirtualNetworkConfig * _Nonnull)config {
 
-    DDLogDebug(@"Network Config Changed");
+   // DDLogDebug(@"Network Config Changed");
     
     switch (op) {
         case ZT_VIRTUAL_NETWORK_CONFIG_OPERATION_UP:
-            DDLogDebug(@"ZT_VIRTUAL_NETWORK_CONFIG_OPERATION_UP");
+           // DDLogDebug(@"ZT_VIRTUAL_NETWORK_CONFIG_OPERATION_UP");
             break;
         case ZT_VIRTUAL_NETWORK_CONFIG_OPERATION_DOWN:
-            DDLogDebug(@"ZT_VIRTUAL_NETWORK_CONFIG_OPERATION_DOWN");
+            //DDLogDebug(@"ZT_VIRTUAL_NETWORK_CONFIG_OPERATION_DOWN");
             break;
         case ZT_VIRTUAL_NETWORK_CONFIG_OPERATION_DESTROY:
-            DDLogDebug(@"ZT_VIRTUAL_NETWORK_CONFIG_OPERATION_DESTROY");
+            //DDLogDebug(@"ZT_VIRTUAL_NETWORK_CONFIG_OPERATION_DESTROY");
             break;
         case ZT_VIRTUAL_NETWORK_CONFIG_OPERATION_CONFIG_UPDATE:
-            DDLogDebug(@"ZT_VIRTUAL_NETWORK_CONFIG_OPERATION_CONFIG_UPDATE");
+            //DDLogDebug(@"ZT_VIRTUAL_NETWORK_CONFIG_OPERATION_CONFIG_UPDATE");
             [self updateNetworkConfig:networkId config:config];
             break;
         default:
@@ -208,7 +208,7 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
         NSArray<NetInfo*> *excludes = getLocalNetworks();
 
         for (NetInfo *info in excludes) {
-            DDLogDebug(@"Excluding: %@", info);
+           // DDLogDebug(@"Excluding: %@", info);
             if (info.family == AF_INET) {
                 NEIPv4Route *e = [[NEIPv4Route alloc] initWithDestinationAddress:info.network subnetMask:info.netmask];
                 [v4excludes addObject:e];
@@ -286,7 +286,7 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
                 struct sockaddr_storage network = sockaddr_getNetwork(target);
                 NSString *networkString = sockaddr_getNetworkString(target);
 
-                DDLogDebug(@"Network: %@/%ud", networkString, prefix);
+                //DDLogDebug(@"Network: %@/%ud", networkString, prefix);
 
                 Route *route = [[Route alloc] initWithAddress:network
                                                        prefix:prefix];
@@ -316,7 +316,7 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
                         continue;
                     }
 
-                    DDLogInfo(@"Added Route: %@/%@ Gateway: %@", v4route.destinationAddress, v4route.destinationSubnetMask, v4route.gatewayAddress);
+                    //DDLogInfo(@"Added Route: %@/%@ Gateway: %@", v4route.destinationAddress, v4route.destinationSubnetMask, v4route.gatewayAddress);
 
                     [v4routes addObject:v4route];
                 }
@@ -344,7 +344,7 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
                         continue;
                     }
 
-                    DDLogInfo(@"Added Route: %@/%@ Gateway: %@", v6route.destinationAddress, v6route.destinationNetworkPrefixLength, v6route.gatewayAddress);
+                    //DDLogInfo(@"Added Route: %@/%@ Gateway: %@", v6route.destinationAddress, v6route.destinationNetworkPrefixLength, v6route.gatewayAddress);
 
                     [v6routes addObject:v6route];
                 }
@@ -362,7 +362,7 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
         
         [v4excludes addObject:test];
         
-        DDLogError(@"v4excludes, 14.136.104.10");
+        //DDLogError(@"v4excludes, 14.136.104.10");
         
         //if ([v4excludes count] > 0) {
             settings.IPv4Settings.excludedRoutes = v4excludes;
@@ -381,11 +381,11 @@ NSString * _Nonnull const oneServiceQueueKey = @"com.zerotier.ZeroTierPTP.OneSer
         __weak typeof(self) weakSelf = self;
         [_ptp setTunnelNetworkSettings:settings completionHandler:^(NSError * _Nullable error) {
             if (error) {
-                //DDLogError(@"%@", error);
+                ////DDLogError(@"%@", error);
                 return;
             }
 
-            DDLogDebug(@"Whoah. We configured the adapter!");
+            //DDLogDebug(@"Whoah. We configured the adapter!");
 
             [weakSelf.tunTapAdapter start];
         }];

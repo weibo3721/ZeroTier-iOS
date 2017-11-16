@@ -21,7 +21,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
     DDLogVerbose(@"Verbose");
     DDLogInfo(@"Info");
     DDLogWarn(@"Warn");
-    DDLogError(@"Error");
+    //DDLogError(@"Error");
     
     DDLog *aDDLogInstance = [DDLog new];
     [aDDLogInstance addLogger:[DDTTYLogger sharedInstance]];
@@ -29,7 +29,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
     DDLogVerboseToDDLog(aDDLogInstance, @"Verbose from aDDLogInstance");
     DDLogInfoToDDLog(aDDLogInstance, @"Info from aDDLogInstance");
     DDLogWarnToDDLog(aDDLogInstance, @"Warn from aDDLogInstance");
-    DDLogErrorToDDLog(aDDLogInstance, @"Error from aDDLogInstance");
+    //DDLogErrorToDDLog(aDDLogInstance, @"Error from aDDLogInstance");
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification

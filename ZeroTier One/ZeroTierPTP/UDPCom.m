@@ -15,7 +15,6 @@
 
 @implementation UDPCom
 
-extern const DDLogLevel ddLogLevel;
 
 - (instancetype)initWithPTP:(NEPacketTunnelProvider*)ptp {
     self = [super init];
@@ -34,22 +33,22 @@ extern const DDLogLevel ddLogLevel;
 
     switch(curReach.currentReachabilityStatus) {
         case NotReachable:
-            DDLogDebug(@"NetworkStatus: Not Reachable");
+            //DDLogDebug(@"NetworkStatus: Not Reachable");
             break;
         case ReachableViaWiFi:
-            DDLogDebug(@"NetworkStatus: Reachable via WiFi");
+            //DDLogDebug(@"NetworkStatus: Reachable via WiFi");
             break;
         case ReachableViaWWAN:
-            DDLogDebug(@"NetworkStatus: Reachable via WWAN");
+            //DDLogDebug(@"NetworkStatus: Reachable via WWAN");
             break;
         default:
-            DDLogDebug(@"NetworkStatus: Unknown");
+            //DDLogDebug(@"NetworkStatus: Unknown");
             break;
     }
 }
 
 - (void)setupSocket {
-    DDLogDebug(@"Setting up socket");
+    //DDLogDebug(@"Setting up socket");
     if (_socket == nil) {
         _socket = [[GCDAsyncUdpSocket alloc] initWithDelegate:self delegateQueue: dispatch_get_main_queue()];
 
@@ -57,21 +56,21 @@ extern const DDLogLevel ddLogLevel;
         [_socket enableReusePort:YES error:&error];
 
         if (error) {
-            //DDLogError(@"Error setting reuse port: %@", error);
+            ////DDLogError(@"Error setting reuse port: %@", error);
             error = nil;
         }
 
         [_socket bindToPort:9993 error:&error];
 
         if (error) {
-            //DDLogError(@"Error binding to port 9993: %@", error);
+            ////DDLogError(@"Error binding to port 9993: %@", error);
             error = nil;
         }
 
         [_socket beginReceiving:&error];
 
         if (error) {
-            //DDLogError(@"Error listening to port 9993: %@", error);
+            ////DDLogError(@"Error listening to port 9993: %@", error);
             error = nil;
         }
 
@@ -87,14 +86,14 @@ extern const DDLogLevel ddLogLevel;
 }
 
 - (void)shutdown {
-    DDLogDebug(@"Shutting down UDPCom");
+    //DDLogDebug(@"Shutting down UDPCom");
     [_socket pauseReceiving];
     [_socket close];
     close(_socket4FD);
     close(_socket6FD);
     _socket4FD = -1;
     _socket6FD = -1;
-    DDLogDebug(@"Sockets closed");
+    //DDLogDebug(@"Sockets closed");
 }
 
 - (int32_t)sendDataWithLocalAddress:(const struct sockaddr_storage*)localAddress toRemoteAddress:(const struct sockaddr_storage *)remoteAddress data:(NSData *)data ttl:(uint32_t)ttl {
@@ -107,18 +106,18 @@ extern const DDLogLevel ddLogLevel;
 
     if (destination.ss_family == AF_INET) {
         if (_socket4FD < 0) {
-            //DDLogError(@"Invalid IPv4 Socket");
+            ////DDLogError(@"Invalid IPv4 Socket");
             [self setupSocket];
             return -2;
         }
 
         NSString *dest = sockaddr_getString(destination);
-        DDLogDebug(@"Sending %lu byte packet to %@", data.length, dest);
+       // DDLogDebug(@"Sending %lu byte packet to %@", data.length, dest);
 
         sent = (int32_t)sendto(_socket4FD, data.bytes, data.length, 0, (struct sockaddr*)&destination, sizeof(struct sockaddr_in));
 
         if (sent < 0) {
-            //DDLogError(@"Sending to %@ failed.  Try sending via NAT64", dest);
+            ////DDLogError(@"Sending to %@ failed.  Try sending via NAT64", dest);
             // sending over IPv4 failed.  Try sending via NAT64
             destination = [NetworkUtil v6addressFromv4Address:remoteAddress];
         }
@@ -129,18 +128,18 @@ extern const DDLogLevel ddLogLevel;
 
     if (destination.ss_family == AF_INET6) {
         if (_socket6FD < 0) {
-            //DDLogError(@"Invalid IPv6 socket");
+            ////DDLogError(@"Invalid IPv6 socket");
             [self setupSocket];
             return -2;
         }
 
         NSString *dest = sockaddr_getString(destination);
-        DDLogDebug(@"Sending %lu byte packet to %@", data.length, dest);
+        //DDLogDebug(@"Sending %lu byte packet to %@", data.length, dest);
 
         sent = (int32_t)sendto(_socket6FD, data.bytes, data.length, 0, (struct sockaddr*)&destination, sizeof(struct sockaddr_in6));
 
         if (sent < 0) {
-            //DDLogError(@"Sending to %@ failed.", dest);
+            ////DDLogError(@"Sending to %@ failed.", dest);
             return -1;
         }
         else {
@@ -157,30 +156,30 @@ extern const DDLogLevel ddLogLevel;
     struct sockaddr_storage remoteAddr;
     [address getBytes:&remoteAddr length:sizeof(struct sockaddr_storage)];
     NSString *addrString = sockaddr_getString(remoteAddr);
-    DDLogDebug(@"Received %lu bytes from %@", (unsigned long)data.length, addrString);
+   // DDLogDebug(@"Received %lu bytes from %@", (unsigned long)data.length, addrString);
     [_node processWirePacket:&remoteAddr packetData:data];
 }
 
 - (void)udpSocket:(GCDAsyncUdpSocket *)sock didNotSendDataWithTag:(long)tag dueToError:(NSError *)error {
     (void)sock;
     if (error != nil) {
-        //DDLogError(@"%@", error);
+        ////DDLogError(@"%@", error);
     }
-    DDLogDebug(@"didNotSendDataWithTag: %ld", tag);
+    //DDLogDebug(@"didNotSendDataWithTag: %ld", tag);
 }
 
 - (void)udpSocket:(GCDAsyncUdpSocket *)sock didSendDataWithTag:(long)tag {
     (void)sock;
-    DDLogDebug(@"didSendDataWithTag: %ld", tag);
+    //DDLogDebug(@"didSendDataWithTag: %ld", tag);
 }
 
 - (void)udpSocketDidClose:(GCDAsyncUdpSocket *)sock withError:(NSError *)error {
     (void)sock;
     if (error != nil) {
-        //DDLogError(@"%@", error);
+        ////DDLogError(@"%@", error);
     }
 
-    DDLogDebug(@"socket closed");
+    //DDLogDebug(@"socket closed");
 }
 
 @end

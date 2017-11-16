@@ -18,12 +18,12 @@
 
     (void)options;
 
-    DDLogDebug(@"PTP Loaded");
+    //DDLogDebug(@"PTP Loaded");
 
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [DDLog addLogger:[DDTTYLogger sharedInstance]];
-        [DDLog addLogger:[DDASLLogger sharedInstance]];
+       // [DDLog addLogger:[DDTTYLogger sharedInstance]];
+        //[DDLog addLogger:[DDASLLogger sharedInstance]];
     });
 
     if (_udpCom == nil) {
@@ -39,7 +39,7 @@
              object:_reachability];
 
     if ([_reachability startNotifier] != YES) {
-        //DDLogError(@"Couldn't start reachability task");
+        ////DDLogError(@"Couldn't start reachability task");
     }
 
     _service = [[OneService alloc] initWithPTP:self
@@ -77,7 +77,7 @@
     }
 
     [_service runService:allowDefault completionHandler:^{
-        DDLogDebug(@"runService completion handler");
+       // DDLogDebug(@"runService completion handler");
 
         if (networkId != 0) {
             [_service joinNetwork:networkId];
@@ -136,15 +136,16 @@
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:messageData
                                                          options:NSJSONReadingMutableContainers
                                                            error:&error];
-
+    NSLog(@"handleAppMessage");
+    //DDLogError(@"Error deserializing JSON data: %@", error);
     if (error) {
-        //DDLogError(@"Error deserializing JSON data: %@", error);
+        
         return;
     }
 
     NSString *request = [dict objectForKey:@"request"];
     if (!request) {
-        //DDLogError(@"No request in JSON data");
+        ////DDLogError(@"No request in JSON data");
         return;
     }
 
@@ -160,7 +161,7 @@
                                                                      error:&error];
 
             if (error) {
-                //DDLogError(@"Error serializing response: %@", error);
+                ////DDLogError(@"Error serializing response: %@", error);
                 return;
             }
 
@@ -169,7 +170,7 @@
             }
         }
         else {
-            //DDLogError(@"Unable to find \"networkid\" element");
+            ////DDLogError(@"Unable to find \"networkid\" element");
             return;
         }
     }
@@ -179,7 +180,7 @@
             NSNumber *deviceId = [NSNumber numberWithUnsignedLongLong:[_service getDeviceID]];
 
             if (deviceId == nil) {
-                //DDLogError(@"Unable to retrieve device ID from service");
+                ////DDLogError(@"Unable to retrieve device ID from service");
                 return;
             }
 
@@ -190,7 +191,7 @@
                                                                      error:&error];
 
             if (error) {
-                //DDLogError(@"Error serializing device ID response: %@", error);
+                ////DDLogError(@"Error serializing device ID response: %@", error);
                 return;
             }
 
@@ -199,11 +200,11 @@
             }
         }
         else {
-            //DDLogError(@"_service is nil!");
+            ////DDLogError(@"_service is nil!");
         }
     }
     else {
-        //DDLogError(@"Unknown command: %@", request);
+        ////DDLogError(@"Unknown command: %@", request);
     }
 }
 

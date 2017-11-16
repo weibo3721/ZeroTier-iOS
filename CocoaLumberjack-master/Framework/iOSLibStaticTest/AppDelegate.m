@@ -25,7 +25,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
     DDLogVerbose(@"Verbose");
     DDLogInfo(@"Info");
     DDLogWarn(@"Warn");
-    DDLogError(@"Error");
+    //DDLogError(@"Error");
     return YES;
 }
 

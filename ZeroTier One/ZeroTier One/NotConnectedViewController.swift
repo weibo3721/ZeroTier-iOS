@@ -8,7 +8,6 @@
 
 import UIKit
 import NetworkExtension
-import CocoaLumberjackSwift
 
 class NotConnectedViewController: UIViewController {
 
@@ -69,7 +68,7 @@ class NotConnectedViewController: UIViewController {
 
     func copyId(_ sender: AnyObject) {
         if let id = _deviceId {
-            DDLogDebug("id \(id) copied!")
+            //DDLogDebug("id \(id) copied!")
             let pb = UIPasteboard.general
             pb.string = id
         }

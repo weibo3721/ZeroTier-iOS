@@ -8,7 +8,6 @@
 
 import UIKit
 import NetworkExtension
-import CocoaLumberjackSwift
 
 class NetworkTableCell: UITableViewCell {
 
@@ -52,24 +51,27 @@ class NetworkTableCell: UITableViewCell {
         if let session = note.object as? NETunnelProviderSession {
             switch(session.status) {
             case .connected:
-                DDLogDebug("State: Connected, Network: \(String(describing: self.networkIdLabel.text))")
+                break
+                //DDLogDebug("State: Connected, Network: \(String(describing: self.networkIdLabel.text))")
             case .connecting:
-                DDLogDebug("State: Connecting, Network: \(String(describing: self.networkIdLabel.text))")
+                break
+                //DDLogDebug("State: Connecting, Network: \(String(describing: self.networkIdLabel.text))")
             case .disconnected:
-                DDLogDebug("State: Disconnected, Network: \(String(describing: self.networkIdLabel.text))")
+                //DDLogDebug("State: Disconnected, Network: \(String(describing: self.networkIdLabel.text))")
                 onOffSwitch.setOn(false, animated: true)
             case .disconnecting:
-                DDLogDebug("State: Disconnecting, Network: \(String(describing: self.networkIdLabel.text))")
+                //DDLogDebug("State: Disconnecting, Network: \(String(describing: self.networkIdLabel.text))")
                 onOffSwitch.setOn(false, animated: true)
             case .invalid:
-                DDLogDebug("State: Invalid, Network: \(String(describing: self.networkIdLabel.text))")
+                //DDLogDebug("State: Invalid, Network: \(String(describing: self.networkIdLabel.text))")
                 onOffSwitch.setOn(false, animated: true)
             case .reasserting:
-                DDLogDebug("State: Reasserting, Network: \(String(describing: self.networkIdLabel.text))")
+                break
+                //DDLogDebug("State: Reasserting, Network: \(String(describing: self.networkIdLabel.text))")
             }
         }
         else {
-            DDLogDebug("Got notofication for unknown object: \(String(describing: note.object))")
+            //DDLogDebug("Got notofication for unknown object: \(String(describing: note.object))")
         }
     }
 
@@ -84,7 +86,7 @@ class NetworkTableCell: UITableViewCell {
                 vpnManager.setEnabled(true)
                 vpnManager.saveWithCompletionHandler() { (error) -> Void in
                     if let e = error {
-                        //DDLogError("\(e)")
+                        ////DDLogError("\(e)")
                         return
                     }
 
@@ -94,7 +96,7 @@ class NetworkTableCell: UITableViewCell {
                         try self.vpnManager.startVpn()
                     }
                     catch let error {
-                        //DDLogError("Unkown error starting VPN: \(error)")
+                        ////DDLogError("Unkown error starting VPN: \(error)")
                     }
                 }
             }

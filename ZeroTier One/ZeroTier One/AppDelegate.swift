@@ -8,7 +8,6 @@
 
 import UIKit
 import NetworkExtension
-import CocoaLumberjackSwift
 
 
 @UIApplicationMain
@@ -20,11 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         //DDLog.add(DDTTYLogger.sharedInstance)
-        DDLog.add(DDASLLogger.sharedInstance)
+        //DDLog.add(DDASLLogger.sharedInstance)
         #if DEBUG
-        CocoaLumberjackSwift.defaultDebugLevel = .all
+        //CocoaLumberjackSwift.defaultDebugLevel = .all
         #else
-        CocoaLumberjackSwift.defaultDebugLevel = .info
+        //CocoaLumberjackSwift.defaultDebugLevel = .info
         #endif
 
 
@@ -89,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ZTVPNManager.sharedManager().loadVpnSettings { newManagers, error in
 
                 if error != nil {
-                    //DDLogError("\(String(describing: error))")
+                    ////DDLogError("\(String(describing: error))")
                     return
                 }
 

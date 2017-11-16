@@ -8,7 +8,6 @@
 
 import WatchKit
 import CocoaLumberjack
-import CocoaLumberjackSwift
 
 let ddloglevel = DDLogLevel.verbose
 
@@ -17,7 +16,7 @@ private func printSomething() {
     DDLogDebug("Debug");
     DDLogInfo("Info");
     DDLogWarn("Warn");
-    DDLogError("Error");
+    //DDLogError("Error");
 }
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
@@ -33,7 +32,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
         DDLogDebug("Debug");
         DDLogInfo("Info");
         DDLogWarn("Warn");
-        DDLogError("Error");
+        //DDLogError("Error");
         
         printSomething()
         

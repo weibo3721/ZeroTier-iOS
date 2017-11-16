@@ -8,7 +8,6 @@
 
 import Cocoa
 import CocoaLumberjack
-import CocoaLumberjackSwift
 
 let ourLogLevel = DDLogLevel.verbose
 
@@ -24,23 +23,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         DDLogVerbose("Verbose");
         DDLogInfo("Info");
         DDLogWarn("Warn");
-        DDLogError("Error");
+        //DDLogError("Error");
         
         defaultDebugLevel = ourLogLevel
         
         DDLogVerbose("Verbose");
         DDLogInfo("Info");
         DDLogWarn("Warn");
-        DDLogError("Error");
+        //DDLogError("Error");
         
         defaultDebugLevel = .off
         
         DDLogVerbose("Verbose", level: ourLogLevel);
         DDLogInfo("Info", level: ourLogLevel);
         DDLogWarn("Warn", level: ourLogLevel);
-        DDLogError("Error", level: ourLogLevel);
+        //DDLogError("Error", level: ourLogLevel);
         
-        DDLogError("Error \(5)", level: ourLogLevel);
+        //DDLogError("Error \(5)", level: ourLogLevel);
         
         defaultDebugLevel = .verbose
         
@@ -50,7 +49,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         DDLogVerbose("Verbose from aDDLogInstance", ddlog: aDDLogInstance)
         DDLogInfo("Info from aDDLogInstance", ddlog: aDDLogInstance)
         DDLogWarn("Warn from aDDLogInstance", ddlog: aDDLogInstance)
-        DDLogError("Error from aDDLogInstance", ddlog: aDDLogInstance)
+        //DDLogError("Error from aDDLogInstance", ddlog: aDDLogInstance)
     }
 
 	func applicationWillTerminate(_ aNotification: Notification) {

@@ -109,14 +109,11 @@
 		93FEFE101B92925400A15E54 /* Topology.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93FEFDF91B92925400A15E54 /* Topology.cpp */; };
 		93FEFE111B92925400A15E54 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93FEFDFB1B92925400A15E54 /* Utils.cpp */; };
 		93FEFE151B92927E00A15E54 /* OSUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93FEFE121B92927E00A15E54 /* OSUtils.cpp */; };
-		D637D3F61EE1423600D5C142 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D637D3D91EE1420200D5C142 /* CocoaLumberjack.framework */; };
 		D637D4031EE1426300D5C142 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D637D3FE1EE1424E00D5C142 /* CocoaAsyncSocket.framework */; };
 		D637D4041EE1426300D5C142 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D637D3FE1EE1424E00D5C142 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D637D4071EE1427100D5C142 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D637D3FE1EE1424E00D5C142 /* CocoaAsyncSocket.framework */; };
 		D65754061EE93D96003D7175 /* RouteRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D65754031EE93D96003D7175 /* RouteRecord.m */; };
 		D65754071EE93D96003D7175 /* RouteTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65754051EE93D96003D7175 /* RouteTableManager.m */; };
-		D6E6761E1EE146A200E90B7D /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D637D3E11EE1420200D5C142 /* CocoaLumberjackSwift.framework */; };
-		D6E6761F1EE146A200E90B7D /* CocoaLumberjackSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D637D3E11EE1420200D5C142 /* CocoaLumberjackSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DCBFEFA2526E0FEE91FF8FF2 /* Pods_ZeroTier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F448AFC46276C0000D6636E /* Pods_ZeroTier.framework */; };
 		E83A3A92A8926981D6DD3BE8 /* Pods_ZeroTierPTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33B2B45C8C29832AE994C4B /* Pods_ZeroTierPTP.framework */; };
 /* End PBXBuildFile section */
@@ -304,13 +301,6 @@
 			remoteGlobalIDString = 6CD9900F1B77868C0011A685;
 			remoteInfo = "iOS CocoaAsyncSocket";
 		};
-		D6E676201EE146A200E90B7D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D637D3C31EE1420200D5C142 /* Lumberjack.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 19FF460E1B8B4D1400B43179;
-			remoteInfo = "CocoaLumberjackSwift-iOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -333,7 +323,6 @@
 			files = (
 				D637D4041EE1426300D5C142 /* CocoaAsyncSocket.framework in Embed Frameworks */,
 				934193751BA3CC4600473AED /* ZeroTier.framework in Embed Frameworks */,
-				D6E6761F1EE146A200E90B7D /* CocoaLumberjackSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,7 +541,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D637D4071EE1427100D5C142 /* CocoaAsyncSocket.framework in Frameworks */,
-				D637D3F61EE1423600D5C142 /* CocoaLumberjack.framework in Frameworks */,
 				933F4C261D99C90E00A33631 /* libresolv.tbd in Frameworks */,
 				9399DCE41BA3CD670021BC4A /* liblibZeroTier.a in Frameworks */,
 				9399DCE51BA3CD7F0021BC4A /* libc++.tbd in Frameworks */,
@@ -577,7 +565,6 @@
 				933D90671EBD23D2006518E6 /* CoreGraphics.framework in Frameworks */,
 				933D90681EBD23D2006518E6 /* CoreLocation.framework in Frameworks */,
 				935F6F741CB358B600709388 /* CoreData.framework in Frameworks */,
-				D6E6761E1EE146A200E90B7D /* CocoaLumberjackSwift.framework in Frameworks */,
 				935F6F721CB358AF00709388 /* SystemConfiguration.framework in Frameworks */,
 				935F6F701CB3589E00709388 /* libz.tbd in Frameworks */,
 				935F6F6E1CB3587D00709388 /* libsqlite3.tbd in Frameworks */,
@@ -1031,7 +1018,6 @@
 				93FBA9591BEDAD46008CB4D8 /* PBXTargetDependency */,
 				934193731BA3CC4600473AED /* PBXTargetDependency */,
 				D637D4061EE1426300D5C142 /* PBXTargetDependency */,
-				D6E676211EE146A200E90B7D /* PBXTargetDependency */,
 			);
 			name = "ZeroTier One";
 			productName = "ZeroTier One";
@@ -1637,11 +1623,6 @@
 			name = "iOS CocoaAsyncSocket";
 			targetProxy = D637D4051EE1426300D5C142 /* PBXContainerItemProxy */;
 		};
-		D6E676211EE146A200E90B7D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "CocoaLumberjackSwift-iOS";
-			targetProxy = D6E676201EE146A200E90B7D /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1896,7 +1877,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3E9FE091DA3A993BBFEA131F /* Pods-ZeroTier One.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1938,7 +1918,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C52D5350C0CDBAB127CE5CFE /* Pods-ZeroTier One.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

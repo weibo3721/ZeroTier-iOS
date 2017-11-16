@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CocoaLumberjackSwift
 
 class AddNetworkViewController: UIViewController, UITextFieldDelegate {
 
@@ -86,7 +85,7 @@ class AddNetworkViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func onAddNetwork(_ sender: AnyObject) {
-        DDLogDebug("Adding network: \(networkIdView.text!)")
+        //DDLogDebug("Adding network: \(networkIdView.text!)")
         view.endEditing(true)
 
         let vcs = navigationController!.viewControllers
@@ -105,7 +104,7 @@ class AddNetworkViewController: UIViewController, UITextFieldDelegate {
 
     func copyId(_ sender: AnyObject) {
         if let id = _deviceId {
-            DDLogDebug("id \(id) copied!")
+            //DDLogDebug("id \(id) copied!")
             let pb = UIPasteboard.general
             pb.string = id
         }
