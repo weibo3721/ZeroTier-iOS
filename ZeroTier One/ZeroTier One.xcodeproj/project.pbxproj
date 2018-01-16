@@ -10,6 +10,80 @@
 		3CCB5251184DA46BCF187E70 /* Pods_ZeroTier_One.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5181B416837488A135ACA87B /* Pods_ZeroTier_One.framework */; };
 		70EA0F2D07E3A11CF7265A5C /* Pods_libZeroTier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCF388B0BB5CA50C58B21EE /* Pods_libZeroTier.framework */; };
 		7C6A399AE3ED98BB1672BE29 /* Pods_ZeroTierTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0730C04C2174D555E9D029F8 /* Pods_ZeroTierTests.framework */; };
+		849753541FC43456006AC187 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849752F31FC43455006AC187 /* ArrayExtension.swift */; };
+		849753551FC43456006AC187 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849752F41FC43455006AC187 /* CGRectExtension.swift */; };
+		849753561FC43456006AC187 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849752F51FC43455006AC187 /* DictionaryExtension.swift */; };
+		849753571FC43456006AC187 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849752F61FC43455006AC187 /* DoubleExtension.swift */; };
+		849753581FC43456006AC187 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849752F71FC43455006AC187 /* IntExtension.swift */; };
+		849753591FC43456006AC187 /* MappableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849752F81FC43455006AC187 /* MappableExtension.swift */; };
+		8497535A1FC43456006AC187 /* MapperExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849752F91FC43455006AC187 /* MapperExtension.swift */; };
+		8497535B1FC43456006AC187 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849752FA1FC43455006AC187 /* NSAttributedString.swift */; };
+		8497535C1FC43456006AC187 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849752FB1FC43455006AC187 /* NSDateExtension.swift */; };
+		8497535D1FC43456006AC187 /* NSErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849752FC1FC43455006AC187 /* NSErrorExtension.swift */; };
+		8497535E1FC43456006AC187 /* NSFileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849752FD1FC43455006AC187 /* NSFileManagerExtension.swift */; };
+		8497535F1FC43456006AC187 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849752FE1FC43455006AC187 /* NSObjectExtension.swift */; };
+		849753601FC43456006AC187 /* PKYStepperExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849752FF1FC43455006AC187 /* PKYStepperExtension.swift */; };
+		849753611FC43456006AC187 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753001FC43455006AC187 /* StringExtension.swift */; };
+		849753621FC43456006AC187 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753011FC43455006AC187 /* UIApplicationExtension.swift */; };
+		849753631FC43456006AC187 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753021FC43455006AC187 /* UIButtonExtension.swift */; };
+		849753641FC43456006AC187 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753031FC43455006AC187 /* UIColorExtension.swift */; };
+		849753651FC43456006AC187 /* UIControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753041FC43455006AC187 /* UIControlExtension.swift */; };
+		849753661FC43456006AC187 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753051FC43455006AC187 /* UIFontExtension.swift */; };
+		849753671FC43456006AC187 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753061FC43455006AC187 /* UIImageExtension.swift */; };
+		849753681FC43456006AC187 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753071FC43455006AC187 /* UILabelExtension.swift */; };
+		849753691FC43456006AC187 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753081FC43455006AC187 /* UINavigationControllerExtension.swift */; };
+		8497536A1FC43456006AC187 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753091FC43455006AC187 /* UIScrollViewExtension.swift */; };
+		8497536B1FC43456006AC187 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497530A1FC43455006AC187 /* UITableViewExtension.swift */; };
+		8497536C1FC43456006AC187 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497530B1FC43455006AC187 /* UITextFieldExtension.swift */; };
+		8497536D1FC43456006AC187 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497530C1FC43455006AC187 /* UITextViewExtension.swift */; };
+		8497536E1FC43456006AC187 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497530D1FC43455006AC187 /* UIViewControllerExtension.swift */; };
+		8497536F1FC43456006AC187 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497530E1FC43455006AC187 /* UIViewExtension.swift */; };
+		849753701FC43456006AC187 /* CheckUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753101FC43455006AC187 /* CheckUpdate.swift */; };
+		849753711FC43456006AC187 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753111FC43455006AC187 /* Login.swift */; };
+		849753721FC43456006AC187 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753121FC43455006AC187 /* LogManager.swift */; };
+		849753731FC43456006AC187 /* NoticeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753131FC43455006AC187 /* NoticeManager.swift */; };
+		849753741FC43456006AC187 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753141FC43455006AC187 /* ProductList.swift */; };
+		849753751FC43456006AC187 /* RemoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753151FC43455006AC187 /* RemoteManager.swift */; };
+		849753761FC43456006AC187 /* ServerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753161FC43455006AC187 /* ServerList.swift */; };
+		849753771FC43456006AC187 /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753171FC43455006AC187 /* VPNManager.swift */; };
+		849753781FC43456006AC187 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753191FC43455006AC187 /* AppInfo.swift */; };
+		849753791FC43456006AC187 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497531A1FC43455006AC187 /* DoubleExtension.swift */; };
+		8497537A1FC43456006AC187 /* Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497531B1FC43455006AC187 /* Hud.swift */; };
+		8497537B1FC43456006AC187 /* LZNetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497531C1FC43455006AC187 /* LZNetWork.swift */; };
+		8497537C1FC43456006AC187 /* ScreenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497531D1FC43455006AC187 /* ScreenInfo.swift */; };
+		8497537D1FC43456006AC187 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497531E1FC43455006AC187 /* Store.swift */; };
+		8497537E1FC43456006AC187 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497531F1FC43455006AC187 /* StringExtension.swift */; };
+		8497537F1FC43456006AC187 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753201FC43455006AC187 /* UIButtonExtension.swift */; };
+		849753801FC43456006AC187 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753211FC43455006AC187 /* UIColorExtension.swift */; };
+		849753811FC43456006AC187 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753221FC43455006AC187 /* UIImageExtension.swift */; };
+		849753821FC43456006AC187 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753231FC43455006AC187 /* UILabelExtension.swift */; };
+		849753831FC43456006AC187 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753241FC43455006AC187 /* UIScrollViewExtension.swift */; };
+		849753841FC43456006AC187 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753251FC43455006AC187 /* UIViewControllerExtension.swift */; };
+		849753851FC43456006AC187 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753261FC43455006AC187 /* UIViewExtension.swift */; };
+		849753861FC43456006AC187 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753271FC43455006AC187 /* URLExtension.swift */; };
+		849753871FC43456006AC187 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753291FC43455006AC187 /* AlertController.swift */; };
+		849753881FC43456006AC187 /* CountDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497532A1FC43455006AC187 /* CountDownButton.swift */; };
+		849753891FC43456006AC187 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497532B1FC43455006AC187 /* MenuView.swift */; };
+		8497538A1FC43456006AC187 /* PopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497532C1FC43455006AC187 /* PopView.swift */; };
+		8497538B1FC43456006AC187 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497532D1FC43455006AC187 /* Splash.swift */; };
+		8497538C1FC43456006AC187 /* AddNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497532F1FC43455006AC187 /* AddNetworkViewController.swift */; };
+		8497538D1FC43456006AC187 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753301FC43455006AC187 /* BaseViewController.swift */; };
+		8497538E1FC43456006AC187 /* ConnectedNetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753311FC43455006AC187 /* ConnectedNetworkMonitor.swift */; };
+		8497538F1FC43456006AC187 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753321FC43455006AC187 /* FeedbackViewController.swift */; };
+		849753901FC43456006AC187 /* LogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753331FC43455006AC187 /* LogTableViewController.swift */; };
+		849753911FC43456006AC187 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753341FC43455006AC187 /* LogViewController.swift */; };
+		849753921FC43456006AC187 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753351FC43455006AC187 /* MainViewController.swift */; };
+		849753931FC43456006AC187 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753361FC43455006AC187 /* MenuViewController.swift */; };
+		849753941FC43456006AC187 /* MobileLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753371FC43455006AC187 /* MobileLoginViewController.swift */; };
+		849753951FC43456006AC187 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753381FC43455006AC187 /* MoreViewController.swift */; };
+		849753961FC43456006AC187 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753391FC43455006AC187 /* NavigationController.swift */; };
+		849753971FC43456006AC187 /* NetworkInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497533A1FC43455006AC187 /* NetworkInfoViewController.swift */; };
+		849753981FC43456006AC187 /* NetworkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497533B1FC43455006AC187 /* NetworkListViewController.swift */; };
+		849753991FC43456006AC187 /* NetworkTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497533C1FC43455006AC187 /* NetworkTableCell.swift */; };
+		8497539A1FC43456006AC187 /* NotConnectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497533D1FC43455006AC187 /* NotConnectedViewController.swift */; };
+		8497539B1FC43456006AC187 /* ServerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497533E1FC43455006AC187 /* ServerListViewController.swift */; };
+		8497539C1FC43456006AC187 /* TunnelCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497533F1FC43455006AC187 /* TunnelCommunication.swift */; };
+		8497539D1FC43456006AC187 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849753401FC43455006AC187 /* WebViewController.swift */; };
 		930A66311CD535F9000A13DA /* ZTVPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930A66301CD535F9000A13DA /* ZTVPNManager.swift */; };
 		930A66331CD537AD000A13DA /* ZTVPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930A66321CD537AD000A13DA /* ZTVPN.swift */; };
 		9311310F1D93433B005C55B8 /* Membership.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 931131081D9342DD005C55B8 /* Membership.cpp */; };
@@ -347,6 +421,81 @@
 		5181B416837488A135ACA87B /* Pods_ZeroTier_One.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroTier_One.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		744A32429005351E3965EAC2 /* Pods-ZeroTier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroTier.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZeroTier/Pods-ZeroTier.release.xcconfig"; sourceTree = "<group>"; };
 		7F448AFC46276C0000D6636E /* Pods_ZeroTier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroTier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		849752F31FC43455006AC187 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		849752F41FC43455006AC187 /* CGRectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
+		849752F51FC43455006AC187 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		849752F61FC43455006AC187 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		849752F71FC43455006AC187 /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		849752F81FC43455006AC187 /* MappableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappableExtension.swift; sourceTree = "<group>"; };
+		849752F91FC43455006AC187 /* MapperExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapperExtension.swift; sourceTree = "<group>"; };
+		849752FA1FC43455006AC187 /* NSAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
+		849752FB1FC43455006AC187 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
+		849752FC1FC43455006AC187 /* NSErrorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSErrorExtension.swift; sourceTree = "<group>"; };
+		849752FD1FC43455006AC187 /* NSFileManagerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSFileManagerExtension.swift; sourceTree = "<group>"; };
+		849752FE1FC43455006AC187 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		849752FF1FC43455006AC187 /* PKYStepperExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKYStepperExtension.swift; sourceTree = "<group>"; };
+		849753001FC43455006AC187 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		849753011FC43455006AC187 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		849753021FC43455006AC187 /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		849753031FC43455006AC187 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		849753041FC43455006AC187 /* UIControlExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlExtension.swift; sourceTree = "<group>"; };
+		849753051FC43455006AC187 /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		849753061FC43455006AC187 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		849753071FC43455006AC187 /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		849753081FC43455006AC187 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		849753091FC43455006AC187 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		8497530A1FC43455006AC187 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		8497530B1FC43455006AC187 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		8497530C1FC43455006AC187 /* UITextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
+		8497530D1FC43455006AC187 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		8497530E1FC43455006AC187 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		849753101FC43455006AC187 /* CheckUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckUpdate.swift; sourceTree = "<group>"; };
+		849753111FC43455006AC187 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		849753121FC43455006AC187 /* LogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		849753131FC43455006AC187 /* NoticeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeManager.swift; sourceTree = "<group>"; };
+		849753141FC43455006AC187 /* ProductList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
+		849753151FC43455006AC187 /* RemoteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteManager.swift; sourceTree = "<group>"; };
+		849753161FC43455006AC187 /* ServerList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerList.swift; sourceTree = "<group>"; };
+		849753171FC43455006AC187 /* VPNManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
+		849753191FC43455006AC187 /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		8497531A1FC43455006AC187 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		8497531B1FC43455006AC187 /* Hud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hud.swift; sourceTree = "<group>"; };
+		8497531C1FC43455006AC187 /* LZNetWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LZNetWork.swift; sourceTree = "<group>"; };
+		8497531D1FC43455006AC187 /* ScreenInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenInfo.swift; sourceTree = "<group>"; };
+		8497531E1FC43455006AC187 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		8497531F1FC43455006AC187 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		849753201FC43455006AC187 /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		849753211FC43455006AC187 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		849753221FC43455006AC187 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		849753231FC43455006AC187 /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		849753241FC43455006AC187 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		849753251FC43455006AC187 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		849753261FC43455006AC187 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		849753271FC43455006AC187 /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		849753291FC43455006AC187 /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		8497532A1FC43455006AC187 /* CountDownButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountDownButton.swift; sourceTree = "<group>"; };
+		8497532B1FC43455006AC187 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		8497532C1FC43455006AC187 /* PopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopView.swift; sourceTree = "<group>"; };
+		8497532D1FC43455006AC187 /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		8497532F1FC43455006AC187 /* AddNetworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNetworkViewController.swift; sourceTree = "<group>"; };
+		849753301FC43455006AC187 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		849753311FC43455006AC187 /* ConnectedNetworkMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectedNetworkMonitor.swift; sourceTree = "<group>"; };
+		849753321FC43455006AC187 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		849753331FC43455006AC187 /* LogTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogTableViewController.swift; sourceTree = "<group>"; };
+		849753341FC43455006AC187 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		849753351FC43455006AC187 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		849753361FC43455006AC187 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		849753371FC43455006AC187 /* MobileLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileLoginViewController.swift; sourceTree = "<group>"; };
+		849753381FC43455006AC187 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		849753391FC43455006AC187 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		8497533A1FC43455006AC187 /* NetworkInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkInfoViewController.swift; sourceTree = "<group>"; };
+		8497533B1FC43455006AC187 /* NetworkListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkListViewController.swift; sourceTree = "<group>"; };
+		8497533C1FC43455006AC187 /* NetworkTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTableCell.swift; sourceTree = "<group>"; };
+		8497533D1FC43455006AC187 /* NotConnectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotConnectedViewController.swift; sourceTree = "<group>"; };
+		8497533E1FC43455006AC187 /* ServerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerListViewController.swift; sourceTree = "<group>"; };
+		8497533F1FC43455006AC187 /* TunnelCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TunnelCommunication.swift; sourceTree = "<group>"; };
+		849753401FC43455006AC187 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		849753411FC43455006AC187 /* ZeroTier-BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZeroTier-BridgingHeader.h"; sourceTree = "<group>"; };
 		930A66301CD535F9000A13DA /* ZTVPNManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZTVPNManager.swift; sourceTree = "<group>"; };
 		930A66321CD537AD000A13DA /* ZTVPN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZTVPN.swift; sourceTree = "<group>"; };
 		931131081D9342DD005C55B8 /* Membership.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Membership.cpp; path = ../ZeroTierOne/node/Membership.cpp; sourceTree = SOURCE_ROOT; };
@@ -621,6 +770,128 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		849752F11FC43455006AC187 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				849752F21FC43455006AC187 /* extension */,
+				8497530F1FC43455006AC187 /* Logic */,
+				849753181FC43455006AC187 /* util */,
+				849753281FC43455006AC187 /* View */,
+				8497532E1FC43455006AC187 /* ViewControllers */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		849752F21FC43455006AC187 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				849752F31FC43455006AC187 /* ArrayExtension.swift */,
+				849752F41FC43455006AC187 /* CGRectExtension.swift */,
+				849752F51FC43455006AC187 /* DictionaryExtension.swift */,
+				849752F61FC43455006AC187 /* DoubleExtension.swift */,
+				849752F71FC43455006AC187 /* IntExtension.swift */,
+				849752F81FC43455006AC187 /* MappableExtension.swift */,
+				849752F91FC43455006AC187 /* MapperExtension.swift */,
+				849752FA1FC43455006AC187 /* NSAttributedString.swift */,
+				849752FB1FC43455006AC187 /* NSDateExtension.swift */,
+				849752FC1FC43455006AC187 /* NSErrorExtension.swift */,
+				849752FD1FC43455006AC187 /* NSFileManagerExtension.swift */,
+				849752FE1FC43455006AC187 /* NSObjectExtension.swift */,
+				849752FF1FC43455006AC187 /* PKYStepperExtension.swift */,
+				849753001FC43455006AC187 /* StringExtension.swift */,
+				849753011FC43455006AC187 /* UIApplicationExtension.swift */,
+				849753021FC43455006AC187 /* UIButtonExtension.swift */,
+				849753031FC43455006AC187 /* UIColorExtension.swift */,
+				849753041FC43455006AC187 /* UIControlExtension.swift */,
+				849753051FC43455006AC187 /* UIFontExtension.swift */,
+				849753061FC43455006AC187 /* UIImageExtension.swift */,
+				849753071FC43455006AC187 /* UILabelExtension.swift */,
+				849753081FC43455006AC187 /* UINavigationControllerExtension.swift */,
+				849753091FC43455006AC187 /* UIScrollViewExtension.swift */,
+				8497530A1FC43455006AC187 /* UITableViewExtension.swift */,
+				8497530B1FC43455006AC187 /* UITextFieldExtension.swift */,
+				8497530C1FC43455006AC187 /* UITextViewExtension.swift */,
+				8497530D1FC43455006AC187 /* UIViewControllerExtension.swift */,
+				8497530E1FC43455006AC187 /* UIViewExtension.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		8497530F1FC43455006AC187 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				849753101FC43455006AC187 /* CheckUpdate.swift */,
+				849753111FC43455006AC187 /* Login.swift */,
+				849753121FC43455006AC187 /* LogManager.swift */,
+				849753131FC43455006AC187 /* NoticeManager.swift */,
+				849753141FC43455006AC187 /* ProductList.swift */,
+				849753151FC43455006AC187 /* RemoteManager.swift */,
+				849753161FC43455006AC187 /* ServerList.swift */,
+				849753171FC43455006AC187 /* VPNManager.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		849753181FC43455006AC187 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				849753191FC43455006AC187 /* AppInfo.swift */,
+				8497531A1FC43455006AC187 /* DoubleExtension.swift */,
+				8497531B1FC43455006AC187 /* Hud.swift */,
+				8497531C1FC43455006AC187 /* LZNetWork.swift */,
+				8497531D1FC43455006AC187 /* ScreenInfo.swift */,
+				8497531E1FC43455006AC187 /* Store.swift */,
+				8497531F1FC43455006AC187 /* StringExtension.swift */,
+				849753201FC43455006AC187 /* UIButtonExtension.swift */,
+				849753211FC43455006AC187 /* UIColorExtension.swift */,
+				849753221FC43455006AC187 /* UIImageExtension.swift */,
+				849753231FC43455006AC187 /* UILabelExtension.swift */,
+				849753241FC43455006AC187 /* UIScrollViewExtension.swift */,
+				849753251FC43455006AC187 /* UIViewControllerExtension.swift */,
+				849753261FC43455006AC187 /* UIViewExtension.swift */,
+				849753271FC43455006AC187 /* URLExtension.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		849753281FC43455006AC187 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				849753291FC43455006AC187 /* AlertController.swift */,
+				8497532A1FC43455006AC187 /* CountDownButton.swift */,
+				8497532B1FC43455006AC187 /* MenuView.swift */,
+				8497532C1FC43455006AC187 /* PopView.swift */,
+				8497532D1FC43455006AC187 /* Splash.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8497532E1FC43455006AC187 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8497532F1FC43455006AC187 /* AddNetworkViewController.swift */,
+				849753301FC43455006AC187 /* BaseViewController.swift */,
+				849753311FC43455006AC187 /* ConnectedNetworkMonitor.swift */,
+				849753321FC43455006AC187 /* FeedbackViewController.swift */,
+				849753331FC43455006AC187 /* LogTableViewController.swift */,
+				849753341FC43455006AC187 /* LogViewController.swift */,
+				849753351FC43455006AC187 /* MainViewController.swift */,
+				849753361FC43455006AC187 /* MenuViewController.swift */,
+				849753371FC43455006AC187 /* MobileLoginViewController.swift */,
+				849753381FC43455006AC187 /* MoreViewController.swift */,
+				849753391FC43455006AC187 /* NavigationController.swift */,
+				8497533A1FC43455006AC187 /* NetworkInfoViewController.swift */,
+				8497533B1FC43455006AC187 /* NetworkListViewController.swift */,
+				8497533C1FC43455006AC187 /* NetworkTableCell.swift */,
+				8497533D1FC43455006AC187 /* NotConnectedViewController.swift */,
+				8497533E1FC43455006AC187 /* ServerListViewController.swift */,
+				8497533F1FC43455006AC187 /* TunnelCommunication.swift */,
+				849753401FC43455006AC187 /* WebViewController.swift */,
+				849753411FC43455006AC187 /* ZeroTier-BridgingHeader.h */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		934193471BA3CB3100473AED /* ZeroTierPTP */ = {
 			isa = PBXGroup;
 			children = (
@@ -708,6 +979,7 @@
 				D637D3C31EE1420200D5C142 /* Lumberjack.xcodeproj */,
 				D65754001EE93D96003D7175 /* RouteTableManager */,
 				93FEFD121B9026C200A15E54 /* ZeroTier One */,
+				849752F11FC43455006AC187 /* ViewModel */,
 				934193471BA3CB3100473AED /* ZeroTierPTP */,
 				934193601BA3CC4600473AED /* ZeroTierCocoa */,
 				93FEFDBB1B92902900A15E54 /* libZeroTier */,
@@ -1533,19 +1805,93 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849753941FC43456006AC187 /* MobileLoginViewController.swift in Sources */,
+				849753891FC43456006AC187 /* MenuView.swift in Sources */,
+				849753691FC43456006AC187 /* UINavigationControllerExtension.swift in Sources */,
+				849753601FC43456006AC187 /* PKYStepperExtension.swift in Sources */,
+				8497537F1FC43456006AC187 /* UIButtonExtension.swift in Sources */,
+				8497538B1FC43456006AC187 /* Splash.swift in Sources */,
+				8497538E1FC43456006AC187 /* ConnectedNetworkMonitor.swift in Sources */,
+				849753551FC43456006AC187 /* CGRectExtension.swift in Sources */,
+				849753681FC43456006AC187 /* UILabelExtension.swift in Sources */,
+				8497536F1FC43456006AC187 /* UIViewExtension.swift in Sources */,
+				8497537A1FC43456006AC187 /* Hud.swift in Sources */,
+				849753661FC43456006AC187 /* UIFontExtension.swift in Sources */,
+				8497535F1FC43456006AC187 /* NSObjectExtension.swift in Sources */,
+				849753711FC43456006AC187 /* Login.swift in Sources */,
+				849753811FC43456006AC187 /* UIImageExtension.swift in Sources */,
+				849753571FC43456006AC187 /* DoubleExtension.swift in Sources */,
+				8497535A1FC43456006AC187 /* MapperExtension.swift in Sources */,
+				8497538A1FC43456006AC187 /* PopView.swift in Sources */,
+				849753611FC43456006AC187 /* StringExtension.swift in Sources */,
+				849753901FC43456006AC187 /* LogTableViewController.swift in Sources */,
+				849753741FC43456006AC187 /* ProductList.swift in Sources */,
 				D65754071EE93D96003D7175 /* RouteTableManager.m in Sources */,
+				8497539C1FC43456006AC187 /* TunnelCommunication.swift in Sources */,
+				849753731FC43456006AC187 /* NoticeManager.swift in Sources */,
+				849753761FC43456006AC187 /* ServerList.swift in Sources */,
+				849753841FC43456006AC187 /* UIViewControllerExtension.swift in Sources */,
+				849753721FC43456006AC187 /* LogManager.swift in Sources */,
+				849753771FC43456006AC187 /* VPNManager.swift in Sources */,
+				8497538F1FC43456006AC187 /* FeedbackViewController.swift in Sources */,
 				9371B15F1C3B50C700B36ACF /* TunnelCommunication.swift in Sources */,
+				849753791FC43456006AC187 /* DoubleExtension.swift in Sources */,
+				8497536A1FC43456006AC187 /* UIScrollViewExtension.swift in Sources */,
+				8497536E1FC43456006AC187 /* UIViewControllerExtension.swift in Sources */,
+				849753591FC43456006AC187 /* MappableExtension.swift in Sources */,
+				849753871FC43456006AC187 /* AlertController.swift in Sources */,
+				849753781FC43456006AC187 /* AppInfo.swift in Sources */,
+				8497535D1FC43456006AC187 /* NSErrorExtension.swift in Sources */,
 				9371B15D1C35DA0600B36ACF /* AddNetworkViewController.swift in Sources */,
+				849753861FC43456006AC187 /* URLExtension.swift in Sources */,
+				8497535E1FC43456006AC187 /* NSFileManagerExtension.swift in Sources */,
+				849753981FC43456006AC187 /* NetworkListViewController.swift in Sources */,
+				8497537B1FC43456006AC187 /* LZNetWork.swift in Sources */,
+				8497535B1FC43456006AC187 /* NSAttributedString.swift in Sources */,
+				849753631FC43456006AC187 /* UIButtonExtension.swift in Sources */,
+				8497535C1FC43456006AC187 /* NSDateExtension.swift in Sources */,
+				849753581FC43456006AC187 /* IntExtension.swift in Sources */,
+				849753991FC43456006AC187 /* NetworkTableCell.swift in Sources */,
+				849753921FC43456006AC187 /* MainViewController.swift in Sources */,
+				849753831FC43456006AC187 /* UIScrollViewExtension.swift in Sources */,
+				8497539D1FC43456006AC187 /* WebViewController.swift in Sources */,
 				D65754061EE93D96003D7175 /* RouteRecord.m in Sources */,
+				8497536B1FC43456006AC187 /* UITableViewExtension.swift in Sources */,
+				849753641FC43456006AC187 /* UIColorExtension.swift in Sources */,
+				8497538D1FC43456006AC187 /* BaseViewController.swift in Sources */,
 				931495891CC5C84B00BEADD5 /* NotConnectedViewController.swift in Sources */,
+				8497537E1FC43456006AC187 /* StringExtension.swift in Sources */,
 				93FEFD161B9026C200A15E54 /* NetworkListViewController.swift in Sources */,
+				8497537C1FC43456006AC187 /* ScreenInfo.swift in Sources */,
+				849753561FC43456006AC187 /* DictionaryExtension.swift in Sources */,
+				849753651FC43456006AC187 /* UIControlExtension.swift in Sources */,
 				93FEFD141B9026C200A15E54 /* AppDelegate.swift in Sources */,
+				849753961FC43456006AC187 /* NavigationController.swift in Sources */,
 				931495831CBC85DA00BEADD5 /* TWStatus.m in Sources */,
+				849753881FC43456006AC187 /* CountDownButton.swift in Sources */,
+				8497539B1FC43456006AC187 /* ServerListViewController.swift in Sources */,
 				933512F11C2609A200186F46 /* NetworkTableCell.swift in Sources */,
+				849753931FC43456006AC187 /* MenuViewController.swift in Sources */,
+				849753671FC43456006AC187 /* UIImageExtension.swift in Sources */,
+				8497536C1FC43456006AC187 /* UITextFieldExtension.swift in Sources */,
 				9314956C1CB4A42F00BEADD5 /* ConnectedNetworkMonitor.swift in Sources */,
+				849753751FC43456006AC187 /* RemoteManager.swift in Sources */,
+				8497539A1FC43456006AC187 /* NotConnectedViewController.swift in Sources */,
 				930A66331CD537AD000A13DA /* ZTVPN.swift in Sources */,
+				849753541FC43456006AC187 /* ArrayExtension.swift in Sources */,
+				849753821FC43456006AC187 /* UILabelExtension.swift in Sources */,
+				849753801FC43456006AC187 /* UIColorExtension.swift in Sources */,
+				849753951FC43456006AC187 /* MoreViewController.swift in Sources */,
+				849753911FC43456006AC187 /* LogViewController.swift in Sources */,
 				930A66311CD535F9000A13DA /* ZTVPNManager.swift in Sources */,
+				8497537D1FC43456006AC187 /* Store.swift in Sources */,
+				8497536D1FC43456006AC187 /* UITextViewExtension.swift in Sources */,
+				849753971FC43456006AC187 /* NetworkInfoViewController.swift in Sources */,
+				8497538C1FC43456006AC187 /* AddNetworkViewController.swift in Sources */,
+				849753621FC43456006AC187 /* UIApplicationExtension.swift in Sources */,
+				849753851FC43456006AC187 /* UIViewExtension.swift in Sources */,
 				9371B15B1C35CFB100B36ACF /* NetworkInfoViewController.swift in Sources */,
+				849753701FC43456006AC187 /* CheckUpdate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
